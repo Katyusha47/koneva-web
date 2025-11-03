@@ -277,6 +277,12 @@ body {
     width: 100%;
 }
 
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .cta-btn {
     background: var(--gradient);
     color: var(--white);
@@ -291,6 +297,46 @@ body {
 .cta-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+.language-btn {
+    background: transparent;
+    border: 2px solid var(--text-light);
+    color: var(--text-dark);
+    height: 40px;
+    padding: 0 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.language-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.language-btn i {
+    font-size: 1rem;
+}
+
+.lang-text {
+    font-size: 0.9rem;
+}
+
+body.dark-mode .language-btn {
+    color: var(--text-dark);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+body.dark-mode .language-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .dark-mode-btn {
@@ -1446,6 +1492,11 @@ body.dark-mode .hero-wave path {
         display: none;
     }
 
+    .nav-controls {
+        gap: 0.5rem;
+    }
+
+    .language-btn,
     .dark-mode-btn {
         margin-right: 0;
     }

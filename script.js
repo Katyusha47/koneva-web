@@ -38,6 +38,65 @@ darkModeToggle.addEventListener('click', () => {
     }, 300);
 });
 
+// Language Toggle
+const languageToggle = document.getElementById('languageToggle');
+const langText = document.querySelector('.lang-text');
+let currentLang = localStorage.getItem('language') || 'id'; // Default to Indonesian
+
+// Set initial language
+langText.textContent = currentLang === 'id' ? 'ID' : 'EN';
+translatePage(currentLang);
+
+languageToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'en' ? 'id' : 'en';
+    langText.textContent = currentLang === 'en' ? 'EN' : 'ID';
+    localStorage.setItem('language', currentLang);
+    
+    // Add animation
+    languageToggle.style.transform = 'scale(0.9)';
+    setTimeout(() => {
+        languageToggle.style.transform = 'scale(1)';
+    }, 200);
+    
+    // Translate content
+    translatePage(currentLang);
+});
+
+// Translation function
+function translatePage(lang) {
+    // Update document title
+    if (lang === 'id') {
+        document.title = 'Koneva - Tingkatkan Kehadiran Digital Anda';
+    } else {
+        document.title = 'Koneva - Elevate Your Digital Presence';
+    }
+    
+    // Get all elements with data-lang attribute
+    const elementsToTranslate = document.querySelectorAll('[data-lang]');
+    
+    elementsToTranslate.forEach(element => {
+        const key = element.getAttribute('data-lang');
+        if (translations[lang] && translations[lang][key]) {
+            // Check if element is an input or textarea (for placeholders)
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translations[lang][key];
+            } else {
+                // For regular elements, update innerHTML to preserve <span> tags
+                element.innerHTML = translations[lang][key];
+            }
+        }
+    });
+    
+    // Handle placeholders with data-lang-placeholder attribute
+    const placeholderElements = document.querySelectorAll('[data-lang-placeholder]');
+    placeholderElements.forEach(element => {
+        const key = element.getAttribute('data-lang-placeholder');
+        if (translations[lang] && translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+}
+
 // Services Tabs
 const tabButtons = document.querySelectorAll('.tab-btn');
 const tabPanels = document.querySelectorAll('.tab-panel');

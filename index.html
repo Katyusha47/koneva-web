@@ -16,16 +16,22 @@
                     <h2>Kone<span>va</span></h2>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" data-lang="nav-home">Beranda</a></li>
+                    <li><a href="#services" data-lang="nav-services">Layanan</a></li>
+                    <li><a href="#about" data-lang="nav-about">Tentang</a></li>
+                    <li><a href="#portfolio" data-lang="nav-portfolio">Portfolio</a></li>
+                    <li><a href="#contact" data-lang="nav-contact">Kontak</a></li>
                 </ul>
-                <button id="darkModeToggle" class="dark-mode-btn" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button class="cta-btn">Get Started</button>
+                <div class="nav-controls">
+                    <button id="languageToggle" class="language-btn" aria-label="Change language">
+                        <i class="fas fa-globe"></i>
+                        <span class="lang-text">ID</span>
+                    </button>
+                    <button id="darkModeToggle" class="dark-mode-btn" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="cta-btn" data-lang="cta-btn">Mulai Sekarang</button>
+                </div>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -48,23 +54,23 @@
                     <div class="hero-badge">
                         <i class="fas fa-star"></i>
 
-                        <span>Your Digital Partner</span>
+                        <span data-lang="hero-badge">Partner Digital Anda</span>
                     </div>
-                    <h1>Transform Your Business with <span>Koneva</span></h1>
-                    <p class="description">Innovative digital strategies that drive real results. We don't just market—we create experiences that convert.</p>
+                    <h1 data-lang="hero-title">Transformasikan Bisnis Anda dengan <span>Koneva</span></h1>
+                    <p class="description" data-lang="hero-description">Strategi digital inovatif yang menghasilkan hasil nyata. Kami tidak hanya memasarkan—kami menciptakan pengalaman yang mengkonversi.</p>
                     <div class="hero-features">
-                        <div class="feature-tag"><i class="fas fa-check-circle"></i> Data-Driven</div>
-                        <div class="feature-tag"><i class="fas fa-check-circle"></i> AI-Powered</div>
-                        <div class="feature-tag"><i class="fas fa-check-circle"></i> Results-Focused</div>
+                        <div class="feature-tag"><i class="fas fa-check-circle"></i> <span data-lang="feature-1">Berbasis Data</span></div>
+                        <div class="feature-tag"><i class="fas fa-check-circle"></i> <span data-lang="feature-2">Bertenaga AI</span></div>
+                        <div class="feature-tag"><i class="fas fa-check-circle"></i> <span data-lang="feature-3">Fokus Hasil</span></div>
                     </div>
                     <div class="hero-buttons">
                         <button class="btn btn-primary">
-                            <span>Start Your Journey</span>
+                            <span data-lang="btn-start">Mulai Perjalanan Anda</span>
                             <i class="fas fa-arrow-right"></i>
                         </button>
                         <button class="btn btn-secondary">
                             <i class="fas fa-play-circle"></i>
-                            <span>Watch Demo</span>
+                            <span data-lang="btn-demo">Tonton Demo</span>
                         </button>
                     </div>
                 </div>
@@ -84,21 +90,21 @@
                                         <div class="stat-icon"><i class="fas fa-users"></i></div>
                                         <div class="stat-info">
                                             <h4>50+</h4>
-                                            <p>Active Clients</p>
+                                            <p data-lang="stat-clients">Klien Aktif</p>
                                         </div>
                                     </div>
                                     <div class="mockup-stat">
                                         <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
                                         <div class="stat-info">
                                             <h4>200%</h4>
-                                            <p>Avg Growth</p>
+                                            <p data-lang="stat-growth">Pertumbuhan Rata-rata</p>
                                         </div>
                                     </div>
                                     <div class="mockup-stat">
                                         <div class="stat-icon"><i class="fas fa-trophy"></i></div>
                                         <div class="stat-info">
                                             <h4>95%</h4>
-                                            <p>Success Rate</p>
+                                            <p data-lang="stat-success">Tingkat Kesuksesan</p>
                                         </div>
                                     </div>
                                     <div class="mockup-chart">
@@ -109,11 +115,11 @@
                         </div>
                         <div class="floating-card card-1">
                             <i class="fas fa-rocket"></i>
-                            <span>Fast Growth</span>
+                            <span data-lang="card-growth">Pertumbuhan Cepat</span>
                         </div>
                         <div class="floating-card card-2">
                             <i class="fas fa-shield-alt"></i>
-                            <span>Secure</span>
+                            <span data-lang="card-secure">Aman</span>
                         </div>
                     </div>
                 </div>
@@ -130,28 +136,28 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">What We Do</span>
-                <h2>Services That Drive <span>Success</span></h2>
-                <p>Comprehensive solutions designed to elevate your brand and maximize your digital impact.</p>
+                <span class="section-tag" data-lang="services-tag">Apa Yang Kami Lakukan</span>
+                <h2 data-lang="services-title">Layanan Yang Mendorong <span>Kesuksesan</span></h2>
+                <p data-lang="services-desc">Solusi komprehensif yang dirancang untuk meningkatkan merek Anda dan memaksimalkan dampak digital Anda.</p>
             </div>
             
             <div class="services-tabs">
                 <div class="tabs-navigation">
                     <button class="tab-btn active" data-tab="marketing">
                         <i class="fas fa-bullseye"></i>
-                        <span>Marketing</span>
+                        <span data-lang="tab-marketing">Pemasaran</span>
                     </button>
                     <button class="tab-btn" data-tab="creative">
                         <i class="fas fa-palette"></i>
-                        <span>Creative</span>
+                        <span data-lang="tab-creative">Kreatif</span>
                     </button>
                     <button class="tab-btn" data-tab="technology">
                         <i class="fas fa-laptop-code"></i>
-                        <span>Technology</span>
+                        <span data-lang="tab-technology">Teknologi</span>
                     </button>
                     <button class="tab-btn" data-tab="analytics">
                         <i class="fas fa-chart-pie"></i>
-                        <span>Analytics</span>
+                        <span data-lang="tab-analytics">Analitik</span>
                     </button>
                 </div>
                 
@@ -163,12 +169,12 @@
                                 <div class="service-icon">
                                     <i class="fas fa-search"></i>
                                 </div>
-                                <h3>SEO & Strategy</h3>
-                                <p>Dominate search rankings with data-driven SEO strategies that bring qualified traffic.</p>
+                                <h3 data-lang="service-1-title">SEO & Strategi</h3>
+                                <p data-lang="service-1-desc">Dominasi peringkat pencarian dengan strategi SEO berbasis data yang membawa traffic berkualitas.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-chevron-right"></i> Technical SEO Optimization</li>
-                                    <li><i class="fas fa-chevron-right"></i> Content Strategy</li>
-                                    <li><i class="fas fa-chevron-right"></i> Link Building</li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-1-item-1">Optimasi SEO Teknis</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-1-item-2">Strategi Konten</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-1-item-3">Pembuatan Link</span></li>
                                 </ul>
                             </div>
                             
@@ -177,12 +183,12 @@
                                 <div class="service-icon">
                                     <i class="fas fa-ad"></i>
                                 </div>
-                                <h3>Paid Advertising</h3>
-                                <p>Maximize ROI with targeted campaigns across Google, Meta, and social platforms.</p>
+                                <h3 data-lang="service-2-title">Iklan Berbayar</h3>
+                                <p data-lang="service-2-desc">Maksimalkan ROI dengan kampanye tertarget di Google, Meta, dan platform sosial.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-chevron-right"></i> Google Ads Management</li>
-                                    <li><i class="fas fa-chevron-right"></i> Social Media Ads</li>
-                                    <li><i class="fas fa-chevron-right"></i> Remarketing Campaigns</li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-2-item-1">Manajemen Google Ads</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-2-item-2">Iklan Media Sosial</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-2-item-3">Kampanye Remarketing</span></li>
                                 </ul>
                             </div>
                             
@@ -191,12 +197,12 @@
                                 <div class="service-icon">
                                     <i class="fas fa-share-alt"></i>
                                 </div>
-                                <h3>Social Growth</h3>
-                                <p>Build engaged communities and amplify your brand voice across social channels.</p>
+                                <h3 data-lang="service-3-title">Pertumbuhan Sosial</h3>
+                                <p data-lang="service-3-desc">Bangun komunitas yang engaged dan perkuat suara merek Anda di seluruh saluran sosial.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-chevron-right"></i> Community Management</li>
-                                    <li><i class="fas fa-chevron-right"></i> Influencer Partnerships</li>
-                                    <li><i class="fas fa-chevron-right"></i> Viral Content Creation</li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-3-item-1">Manajemen Komunitas</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-3-item-2">Kemitraan Influencer</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-3-item-3">Konten Viral</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -209,12 +215,12 @@
                                 <div class="service-icon">
                                     <i class="fas fa-pen-nib"></i>
                                 </div>
-                                <h3>Brand Identity</h3>
-                                <p>Create memorable brands that resonate with your audience and stand out.</p>
+                                <h3 data-lang="service-4-title">Identitas Merek</h3>
+                                <p data-lang="service-4-desc">Ciptakan merek yang berkesan yang beresonansi dengan audiens Anda dan menonjol.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-chevron-right"></i> Logo & Visual Design</li>
-                                    <li><i class="fas fa-chevron-right"></i> Brand Guidelines</li>
-                                    <li><i class="fas fa-chevron-right"></i> Brand Positioning</li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-4-item-1">Desain Logo & Visual</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-4-item-2">Pedoman Merek</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-4-item-3">Positioning Merek</span></li>
                                 </ul>
                             </div>
                             
@@ -223,12 +229,12 @@
                                 <div class="service-icon">
                                     <i class="fas fa-video"></i>
                                 </div>
-                                <h3>Video Production</h3>
-                                <p>Captivate audiences with professional video content that tells your story.</p>
+                                <h3 data-lang="service-5-title">Produksi Video</h3>
+                                <p data-lang="service-5-desc">Pikat audiens dengan konten video profesional yang menceritakan kisah Anda.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-chevron-right"></i> Commercial Videos</li>
-                                    <li><i class="fas fa-chevron-right"></i> Motion Graphics</li>
-                                    <li><i class="fas fa-chevron-right"></i> Social Video Content</li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-5-item-1">Video Komersial</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-5-item-2">Motion Graphics</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-5-item-3">Konten Video Sosial</span></li>
                                 </ul>
                             </div>
                             
@@ -237,12 +243,12 @@
                                 <div class="service-icon">
                                     <i class="fas fa-edit"></i>
                                 </div>
-                                <h3>Content Creation</h3>
-                                <p>Compelling content that engages, educates, and converts your audience.</p>
+                                <h3 data-lang="service-6-title">Pembuatan Konten</h3>
+                                <p data-lang="service-6-desc">Konten menarik yang melibatkan, mendidik, dan mengkonversi audiens Anda.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-chevron-right"></i> Copywriting</li>
-                                    <li><i class="fas fa-chevron-right"></i> Blog Content</li>
-                                    <li><i class="fas fa-chevron-right"></i> Email Campaigns</li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-6-item-1">Copywriting</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-6-item-2">Konten Blog</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-6-item-3">Kampanye Email</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -255,12 +261,12 @@
                                 <div class="service-icon">
                                     <i class="fas fa-globe"></i>
                                 </div>
-                                <h3>Web Development</h3>
-                                <p>Fast, beautiful websites that convert visitors into customers.</p>
+                                <h3 data-lang="service-7-title">Pengembangan Web</h3>
+                                <p data-lang="service-7-desc">Website cepat dan indah yang mengkonversi pengunjung menjadi pelanggan.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-chevron-right"></i> Custom Web Design</li>
-                                    <li><i class="fas fa-chevron-right"></i> E-commerce Solutions</li>
-                                    <li><i class="fas fa-chevron-right"></i> Performance Optimization</li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-7-item-1">Desain Web Kustom</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-7-item-2">Solusi E-commerce</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-7-item-3">Optimasi Performa</span></li>
                                 </ul>
                             </div>
                             
@@ -269,12 +275,12 @@
                                 <div class="service-icon">
                                     <i class="fas fa-robot"></i>
                                 </div>
-                                <h3>AI Solutions</h3>
-                                <p>Leverage artificial intelligence to automate and optimize your marketing.</p>
+                                <h3 data-lang="service-8-title">Solusi AI</h3>
+                                <p data-lang="service-8-desc">Manfaatkan kecerdasan buatan untuk mengotomatisasi dan mengoptimalkan pemasaran Anda.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-chevron-right"></i> AI Content Generation</li>
-                                    <li><i class="fas fa-chevron-right"></i> Chatbot Development</li>
-                                    <li><i class="fas fa-chevron-right"></i> Predictive Analytics</li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-8-item-1">Generasi Konten AI</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-8-item-2">Pengembangan Chatbot</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-8-item-3">Analitik Prediktif</span></li>
                                 </ul>
                             </div>
                             
@@ -283,12 +289,12 @@
                                 <div class="service-icon">
                                     <i class="fas fa-mobile-alt"></i>
                                 </div>
-                                <h3>App Development</h3>
-                                <p>Native and cross-platform apps that delight users and drive engagement.</p>
+                                <h3 data-lang="service-9-title">Pengembangan Aplikasi</h3>
+                                <p data-lang="service-9-desc">Aplikasi native dan cross-platform yang menyenangkan pengguna dan mendorong engagement.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-chevron-right"></i> iOS & Android Apps</li>
-                                    <li><i class="fas fa-chevron-right"></i> Progressive Web Apps</li>
-                                    <li><i class="fas fa-chevron-right"></i> App Maintenance</li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-9-item-1">Aplikasi iOS & Android</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-9-item-2">Progressive Web Apps</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-9-item-3">Pemeliharaan Aplikasi</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -301,12 +307,12 @@
                                 <div class="service-icon">
                                     <i class="fas fa-chart-bar"></i>
                                 </div>
-                                <h3>Performance Tracking</h3>
-                                <p>Real-time insights into your marketing performance and campaign effectiveness.</p>
+                                <h3 data-lang="service-10-title">Pelacakan Performa</h3>
+                                <p data-lang="service-10-desc">Wawasan real-time tentang performa pemasaran dan efektivitas kampanye Anda.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-chevron-right"></i> Custom Dashboards</li>
-                                    <li><i class="fas fa-chevron-right"></i> KPI Monitoring</li>
-                                    <li><i class="fas fa-chevron-right"></i> Conversion Tracking</li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-10-item-1">Dashboard Kustom</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-10-item-2">Pemantauan KPI</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-10-item-3">Pelacakan Konversi</span></li>
                                 </ul>
                             </div>
                             
@@ -315,12 +321,12 @@
                                 <div class="service-icon">
                                     <i class="fas fa-database"></i>
                                 </div>
-                                <h3>Data Analysis</h3>
-                                <p>Turn raw data into actionable insights that drive business decisions.</p>
+                                <h3 data-lang="service-11-title">Analisis Data</h3>
+                                <p data-lang="service-11-desc">Ubah data mentah menjadi wawasan yang dapat ditindaklanjuti untuk mendorong keputusan bisnis.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-chevron-right"></i> Market Research</li>
-                                    <li><i class="fas fa-chevron-right"></i> Competitor Analysis</li>
-                                    <li><i class="fas fa-chevron-right"></i> Customer Insights</li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-11-item-1">Riset Pasar</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-11-item-2">Analisis Kompetitor</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-11-item-3">Wawasan Pelanggan</span></li>
                                 </ul>
                             </div>
                             
@@ -329,12 +335,12 @@
                                 <div class="service-icon">
                                     <i class="fas fa-cogs"></i>
                                 </div>
-                                <h3>Optimization</h3>
-                                <p>Continuously improve campaigns through A/B testing and data-driven refinements.</p>
+                                <h3 data-lang="service-12-title">Optimasi</h3>
+                                <p data-lang="service-12-desc">Tingkatkan kampanye secara berkelanjutan melalui A/B testing dan penyempurnaan berbasis data.</p>
                                 <ul class="service-list">
-                                    <li><i class="fas fa-chevron-right"></i> A/B Testing</li>
-                                    <li><i class="fas fa-chevron-right"></i> Conversion Rate Optimization</li>
-                                    <li><i class="fas fa-chevron-right"></i> Funnel Analysis</li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-12-item-1">A/B Testing</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-12-item-2">Optimasi Conversion Rate</span></li>
+                                    <li><i class="fas fa-chevron-right"></i> <span data-lang="service-12-item-3">Analisis Funnel</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -349,37 +355,37 @@
         <div class="container">
             <div class="about-wrapper">
                 <div class="about-content">
-                    <span class="section-tag">Our Story</span>
-                    <h2>Why Choose <span>Koneva</span>?</h2>
-                    <p class="about-intro">We're not just another agency. We're your growth partner, combining creativity with technology to deliver measurable results.</p>
+                    <span class="section-tag" data-lang="about-tag">Cerita Kami</span>
+                    <h2 data-lang="about-title">Mengapa Memilih <span>Koneva</span>?</h2>
+                    <p class="about-intro" data-lang="about-intro">Kami bukan hanya agensi biasa. Kami adalah partner pertumbuhan Anda, menggabungkan kreativitas dengan teknologi untuk memberikan hasil yang terukur.</p>
                     
                     <div class="milestones">
                         <div class="milestone">
                             <div class="milestone-year">2020</div>
                             <div class="milestone-content">
-                                <h4>Foundation</h4>
-                                <p>Started with a vision to revolutionize digital marketing</p>
+                                <h4 data-lang="milestone-1-title">Pendirian</h4>
+                                <p data-lang="milestone-1-desc">Dimulai dengan visi untuk merevolusi digital marketing</p>
                             </div>
                         </div>
                         <div class="milestone">
                             <div class="milestone-year">2022</div>
                             <div class="milestone-content">
-                                <h4>Expansion</h4>
-                                <p>Grew to serve 50+ clients across multiple industries</p>
+                                <h4 data-lang="milestone-2-title">Ekspansi</h4>
+                                <p data-lang="milestone-2-desc">Berkembang melayani 50+ klien di berbagai industri</p>
                             </div>
                         </div>
                         <div class="milestone">
                             <div class="milestone-year">2024</div>
                             <div class="milestone-content">
-                                <h4>Innovation</h4>
-                                <p>Launched AI-powered marketing solutions</p>
+                                <h4 data-lang="milestone-3-title">Inovasi</h4>
+                                <p data-lang="milestone-3-desc">Meluncurkan solusi marketing bertenaga AI</p>
                             </div>
                         </div>
                         <div class="milestone">
                             <div class="milestone-year">2025</div>
                             <div class="milestone-content">
-                                <h4>Leadership</h4>
-                                <p>Recognized as industry leaders in digital transformation</p>
+                                <h4 data-lang="milestone-4-title">Kepemimpinan</h4>
+                                <p data-lang="milestone-4-desc">Diakui sebagai pemimpin industri dalam transformasi digital</p>
                             </div>
                         </div>
                     </div>
@@ -389,23 +395,23 @@
                     <div class="value-cards">
                         <div class="value-card">
                             <i class="fas fa-lightbulb"></i>
-                            <h4>Innovation First</h4>
-                            <p>Always ahead of trends</p>
+                            <h4 data-lang="value-1-title">Inovasi Pertama</h4>
+                            <p data-lang="value-1-desc">Selalu di depan tren</p>
                         </div>
                         <div class="value-card">
                             <i class="fas fa-heart"></i>
-                            <h4>Client-Centric</h4>
-                            <p>Your success is our mission</p>
+                            <h4 data-lang="value-2-title">Berpusat pada Klien</h4>
+                            <p data-lang="value-2-desc">Kesuksesan Anda adalah misi kami</p>
                         </div>
                         <div class="value-card">
                             <i class="fas fa-shield-alt"></i>
-                            <h4>Transparency</h4>
-                            <p>Honest communication always</p>
+                            <h4 data-lang="value-3-title">Transparansi</h4>
+                            <p data-lang="value-3-desc">Komunikasi jujur selalu</p>
                         </div>
                         <div class="value-card">
                             <i class="fas fa-rocket"></i>
-                            <h4>Results-Driven</h4>
-                            <p>ROI is our priority</p>
+                            <h4 data-lang="value-4-title">Fokus Hasil</h4>
+                            <p data-lang="value-4-desc">ROI adalah prioritas kami</p>
                         </div>
                     </div>
                 </div>
@@ -417,11 +423,10 @@
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Case Studies</span>
-                <h2>Success <span>Stories</span></h2>
-                <p>Real results for real businesses. See how we've helped our clients achieve their goals.</p>
+                <span class="section-tag" data-lang="portfolio-tag">Studi Kasus</span>
+                <h2 data-lang="portfolio-title">Kisah <span>Sukses</span></h2>
+                <p data-lang="portfolio-desc">Hasil nyata untuk bisnis nyata. Lihat bagaimana kami membantu klien mencapai tujuan mereka.</p>
             </div>
-            <div class="portfolio-masonry">
             <div class="portfolio-masonry">
                 <div class="portfolio-item large">
                     <div class="portfolio-image">
@@ -431,12 +436,12 @@
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-meta">
-                            <span class="category">E-commerce</span>
-                            <span class="result">+180% Sales</span>
+                            <span class="category" data-lang="portfolio-1-category">E-commerce</span>
+                            <span class="result" data-lang="portfolio-1-result">+180% Penjualan</span>
                         </div>
-                        <h3>Fashion Brand Transformation</h3>
-                        <p>Complete digital overhaul leading to record-breaking online sales</p>
-                        <a href="#" class="portfolio-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                        <h3 data-lang="portfolio-1-title">Transformasi Merek Fashion</h3>
+                        <p data-lang="portfolio-1-desc">Perombakan digital lengkap yang menghasilkan penjualan online rekor</p>
+                        <a href="#" class="portfolio-link"><span data-lang="portfolio-1-link">Lihat Studi Kasus</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -448,12 +453,12 @@
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-meta">
-                            <span class="category">Healthcare</span>
-                            <span class="result">+250% Leads</span>
+                            <span class="category" data-lang="portfolio-2-category">Kesehatan</span>
+                            <span class="result" data-lang="portfolio-2-result">+250% Leads</span>
                         </div>
-                        <h3>Medical Practice Growth</h3>
-                        <p>Strategic SEO and local marketing campaign</p>
-                        <a href="#" class="portfolio-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                        <h3 data-lang="portfolio-2-title">Pertumbuhan Praktik Medis</h3>
+                        <p data-lang="portfolio-2-desc">Kampanye SEO strategis dan marketing lokal</p>
+                        <a href="#" class="portfolio-link"><span data-lang="portfolio-2-link">Lihat Studi Kasus</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -465,12 +470,12 @@
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-meta">
-                            <span class="category">Education</span>
-                            <span class="result">+300% Engagement</span>
+                            <span class="category" data-lang="portfolio-3-category">Pendidikan</span>
+                            <span class="result" data-lang="portfolio-3-result">+300% Engagement</span>
                         </div>
-                        <h3>EdTech Platform Launch</h3>
-                        <p>Social media viral campaign and influencer partnerships</p>
-                        <a href="#" class="portfolio-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                        <h3 data-lang="portfolio-3-title">Peluncuran Platform EdTech</h3>
+                        <p data-lang="portfolio-3-desc">Kampanye viral media sosial dan kemitraan influencer</p>
+                        <a href="#" class="portfolio-link"><span data-lang="portfolio-3-link">Lihat Studi Kasus</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -482,12 +487,12 @@
                     </div>
                     <div class="portfolio-content">
                         <div class="portfolio-meta">
-                            <span class="category">Restaurant</span>
-                            <span class="result">+400% Orders</span>
+                            <span class="category" data-lang="portfolio-4-category">Restoran</span>
+                            <span class="result" data-lang="portfolio-4-result">+400% Pesanan</span>
                         </div>
-                        <h3>Restaurant Chain Digital Expansion</h3>
-                        <p>Multi-channel strategy driving online orders and foot traffic</p>
-                        <a href="#" class="portfolio-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                        <h3 data-lang="portfolio-4-title">Ekspansi Digital Chain Restoran</h3>
+                        <p data-lang="portfolio-4-desc">Strategi multi-channel yang mendorong pesanan online dan kunjungan</p>
+                        <a href="#" class="portfolio-link"><span data-lang="portfolio-4-link">Lihat Studi Kasus</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -498,8 +503,9 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Ready to elevate your digital marketing strategy? Contact us today to schedule a consultation.</p>
+                <span class="section-tag" data-lang="contact-tag">Hubungi Kami</span>
+                <h2 data-lang="contact-title">Mari <span>Bicara</span></h2>
+                <p data-lang="contact-desc">Siap meningkatkan strategi digital marketing Anda? Hubungi kami hari ini untuk jadwalkan konsultasi.</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
@@ -508,8 +514,8 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
-                            <h4>Address</h4>
-                            <p>123 Business Street, Suite 100<br>City, State 12345</p>
+                            <h4 data-lang="contact-address-title">Alamat</h4>
+                            <p data-lang="contact-address-text">123 Business Street, Suite 100<br>Kota, Provinsi 12345</p>
                         </div>
                     </div>
 
@@ -518,7 +524,7 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div>
-                            <h4>Email</h4>
+                            <h4 data-lang="contact-email-title">Email</h4>
                             <p>contact@koneva.com</p>
                         </div>
                     </div>
@@ -528,7 +534,7 @@
                             <i class="fas fa-phone"></i>
                         </div>
                         <div>
-                            <h4>Phone</h4>
+                            <h4 data-lang="contact-phone-title">Telepon</h4>
                             <p>+1 (555) 123-4567</p>
                         </div>
                     </div>
@@ -540,27 +546,27 @@
                     </div>
                 </div>
 
-                <form class="contact-form">
+                <form class="contact-form" id="contactForm">
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" data-lang-placeholder="form-name" placeholder="Nama Anda" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Phone Number" required>
+                            <input type="tel" data-lang-placeholder="form-phone" placeholder="Nomor Telepon" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="email" placeholder="Email Address" required>
+                            <input type="email" data-lang-placeholder="form-email" placeholder="Alamat Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Company Name">
+                            <input type="text" data-lang-placeholder="form-company" placeholder="Nama Perusahaan">
                         </div>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <textarea data-lang-placeholder="form-message" placeholder="Pesan Anda" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary" data-lang="form-submit">Kirim Pesan</button>
                 </form>
             </div>
         </div>
@@ -572,44 +578,45 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <h2>Kone<span>va</span></h2>
-                    <p>Elevating your digital presence through innovative marketing solutions.</p>
+                    <p data-lang="footer-desc">Meningkatkan kehadiran digital Anda melalui solusi marketing inovatif.</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4>Quick Links</h4>
+                        <h4 data-lang="footer-quick">Tautan Cepat</h4>
                         <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#home" data-lang="nav-home">Beranda</a></li>
+                            <li><a href="#services" data-lang="nav-services">Layanan</a></li>
+                            <li><a href="#about" data-lang="nav-about">Tentang</a></li>
+                            <li><a href="#portfolio" data-lang="nav-portfolio">Portfolio</a></li>
+                            <li><a href="#contact" data-lang="nav-contact">Kontak</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Services</h4>
+                        <h4 data-lang="footer-services-title">Layanan</h4>
                         <ul>
-                            <li><a href="#services">Digital Marketing</a></li>
-                            <li><a href="#services">Content Marketing</a></li>
-                            <li><a href="#services">AI Marketing</a></li>
-                            <li><a href="#services">Web Development</a></li>
+                            <li><a href="#services" data-lang="tab-marketing">Pemasaran</a></li>
+                            <li><a href="#services" data-lang="tab-creative">Kreatif</a></li>
+                            <li><a href="#services" data-lang="tab-technology">Teknologi</a></li>
+                            <li><a href="#services" data-lang="tab-analytics">Analitik</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Contact</h4>
+                        <h4 data-lang="footer-contact-title">Kontak</h4>
                         <ul>
-                            <li><a href="#contact">Get In Touch</a></li>
-                            <li><a href="mailto:contact@digitallab.com">Email Us</a></li>
-                            <li><a href="tel:+15551234567">Call Us</a></li>
+                            <li><a href="#contact" data-lang="footer-contact-1">Hubungi Kami</a></li>
+                            <li><a href="mailto:contact@koneva.com" data-lang="footer-contact-2">Email Kami</a></li>
+                            <li><a href="tel:+15551234567" data-lang="footer-contact-3">Telepon Kami</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Koneva. All rights reserved.</p>
+                <p data-lang="footer-copyright">© 2025 Koneva. Hak cipta dilindungi.</p>
             </div>
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
