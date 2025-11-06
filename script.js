@@ -27,6 +27,7 @@ if (isDarkMode) {
 }
 
 darkModeToggle.addEventListener('click', () => {
+    console.log('Dark mode toggle clicked!');
     body.classList.toggle('dark-mode');
     const darkModeEnabled = body.classList.contains('dark-mode');
     localStorage.setItem('darkMode', darkModeEnabled);
@@ -48,6 +49,7 @@ langText.textContent = currentLang === 'id' ? 'ID' : 'EN';
 translatePage(currentLang);
 
 languageToggle.addEventListener('click', () => {
+    console.log('Language toggle clicked!');
     currentLang = currentLang === 'en' ? 'id' : 'en';
     langText.textContent = currentLang === 'en' ? 'EN' : 'ID';
     localStorage.setItem('language', currentLang);
@@ -370,10 +372,12 @@ let slideIndex = 1;
 showSlide(slideIndex);
 
 function moveSlide(n) {
+    console.log('moveSlide called with n:', n);
     showSlide(slideIndex += n);
 }
 
 function currentSlide(n) {
+    console.log('currentSlide called with n:', n);
     showSlide(slideIndex = n);
 }
 

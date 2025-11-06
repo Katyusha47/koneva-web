@@ -312,6 +312,8 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 1001;
 }
 
 .cta-btn:hover {
@@ -333,6 +335,8 @@ body {
     cursor: pointer;
     transition: all 0.3s;
     font-weight: 600;
+    position: relative;
+    z-index: 1001;
 }
 
 .language-btn:hover {
@@ -372,6 +376,8 @@ body.dark-mode .language-btn:hover {
     cursor: pointer;
     transition: all 0.3s;
     margin-right: 1rem;
+    position: relative;
+    z-index: 1001;
 }
 
 .dark-mode-btn:hover {
@@ -1161,7 +1167,8 @@ body.dark-mode .hero-wave path {
     justify-content: center;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
-    z-index: 10;
+    z-index: 100;
+    pointer-events: auto;
 }
 
 .slider-btn:hover {
@@ -1192,6 +1199,9 @@ body.dark-mode .hero-wave path {
     background: #cbd5e1;
     cursor: pointer;
     transition: all 0.3s;
+    position: relative;
+    z-index: 100;
+    pointer-events: auto;
 }
 
 .dot.active {
