@@ -124,14 +124,14 @@ const translations = {
         'milestone-4-title': '2025 - Terpercaya',
         'milestone-4-desc': 'Menjadi partner digital pilihan UMKM Indonesia',
         
-        'value-1-title': 'Mudah Dipahami',
-        'value-1-desc': 'Tanpa istilah teknis yang membingungkan',
+        'value-1-title': 'Solusi Praktis',
+        'value-1-desc': 'Strategi digital yang efektif dan efisien',
         'value-2-title': 'Harga Terjangkau',
-        'value-2-desc': 'Paket hemat untuk UMKM',
-        'value-3-title': 'Hasil Nyata',
-        'value-3-desc': 'Fokus pada peningkatan penjualan',
+        'value-2-desc': 'Investasi cerdas untuk pertumbuhan bisnis',
+        'value-3-title': 'Tumbuhkan Bisnis',
+        'value-3-desc': 'Tingkatkan omzet dan jangkauan pelanggan',
         'value-4-title': 'Dukungan Penuh',
-        'value-4-desc': 'Siap bantu kapan saja',
+        'value-4-desc': 'Pendampingan bisnis yang konsisten',
         
         // Portfolio Section
         'portfolio-tag': 'Hasil Kerja Kami',
@@ -311,14 +311,14 @@ const translations = {
         'milestone-4-title': '2025 - Trusted',
         'milestone-4-desc': 'Becoming the preferred digital partner for Indonesian SMEs',
         
-        'value-1-title': 'Easy to Understand',
-        'value-1-desc': 'No confusing technical terms',
+        'value-1-title': 'Practical Solutions',
+        'value-1-desc': 'Effective and efficient digital strategies',
         'value-2-title': 'Affordable Prices',
-        'value-2-desc': 'Budget packages for SMEs',
-        'value-3-title': 'Real Results',
-        'value-3-desc': 'Focus on increasing sales',
+        'value-2-desc': 'Smart investment for business growth',
+        'value-3-title': 'Grow Your Business',
+        'value-3-desc': 'Increase revenue and customer reach',
         'value-4-title': 'Full Support',
-        'value-4-desc': 'Ready to help anytime',
+        'value-4-desc': 'Consistent business mentoring',
         
         // Portfolio Section
         'portfolio-tag': 'Our Work',
