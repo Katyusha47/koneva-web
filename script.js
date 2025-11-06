@@ -369,17 +369,21 @@ window.addEventListener('load', () => {
 
 // Testimonial Slider
 let slideIndex = 1;
-showSlide(slideIndex);
 
-function moveSlide(n) {
+// Make functions global
+window.moveSlide = function(n) {
     console.log('moveSlide called with n:', n);
-    showSlide(slideIndex += n);
+    slideIndex += n;
+    showSlide(slideIndex);
 }
 
-function currentSlide(n) {
-    console.log('currentSlide called with n:', n);
-    showSlide(slideIndex = n);
+window.goToSlide = function(n) {
+    console.log('goToSlide called with n:', n);
+    slideIndex = n;
+    showSlide(slideIndex);
 }
+
+showSlide(slideIndex);
 
 function showSlide(n) {
     const slides = document.querySelectorAll('.testimonial-card');
