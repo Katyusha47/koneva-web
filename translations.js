@@ -114,7 +114,7 @@ const translations = {
         // About Section
         'about-tag': 'Tentang Koneva',
         'about-title': 'Kenapa Pilih <span>Koneva</span>?',
-        'about-intro': 'Kami fokus membantu UMKM berkembang di era digital. Dengan bahasa yang mudah dipahami dan harga yang terjangkau.',
+        'about-intro': 'Partner digital terpercaya untuk UMKM Indonesia. Solusi praktis dengan investasi terjangkau untuk pertumbuhan bisnis Anda.',
         'milestone-1-title': '2020 - Memulai',
         'milestone-1-desc': 'Dimulai dengan membantu UMKM lokal go online',
         'milestone-2-title': '2022 - Berkembang',
@@ -301,7 +301,7 @@ const translations = {
         // About Section
         'about-tag': 'About Koneva',
         'about-title': 'Why Choose <span>Koneva</span>?',
-        'about-intro': 'We focus on helping SMEs grow in the digital era. With easy-to-understand language and affordable prices.',
+        'about-intro': 'Trusted digital partner for Indonesian SMEs. Practical solutions with affordable investment for your business growth.',
         'milestone-1-title': '2020 - Starting',
         'milestone-1-desc': 'Started by helping local SMEs go online',
         'milestone-2-title': '2022 - Growing',
