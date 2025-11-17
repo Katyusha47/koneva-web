@@ -12,9 +12,9 @@ const translations = {
         // Hero Section
         'hero-badge': 'Partner Digital Terpercaya',
         'hero-title': 'Kembangkan Bisnis Anda dengan <span>Koneva</span>',
-        'hero-description': 'Kami bantu bisnis Anda tumbuh di dunia digital dengan strategi yang terbukti berhasil dan mudah dipahami.',
+        'hero-description': 'Kami bantu bisnis Anda tumbuh di dunia digital dengan strategi praktis dan terukur.',
         'feature-1': 'Solusi Praktis',
-        'feature-2': 'Mudah Dipahami',
+        'feature-2': 'Mudah Diimplementasikan',
         'feature-3': 'Harga Terjangkau',
         'btn-start': 'Konsultasi Gratis',
         'btn-demo': 'Lihat Contoh',
@@ -199,9 +199,9 @@ const translations = {
         // Hero Section
         'hero-badge': 'Trusted Digital Partner',
         'hero-title': 'Grow Your Business with <span>Koneva</span>',
-        'hero-description': 'We help your business thrive in the digital world with proven and easy-to-understand strategies.',
+        'hero-description': 'We help your business grow with practical, measurable digital strategies.',
         'feature-1': 'Practical Solutions',
-        'feature-2': 'Easy to Understand',
+        'feature-2': 'Easy To Implement',
         'feature-3': 'Affordable',
         'btn-start': 'Free Consultation',
         'btn-demo': 'See Examples',

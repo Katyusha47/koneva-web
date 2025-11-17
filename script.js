@@ -39,30 +39,34 @@ darkModeToggle.addEventListener('click', () => {
     }, 300);
 });
 
-// Language Toggle
+// Language Toggle (only if element exists)
 const languageToggle = document.getElementById('languageToggle');
 const langText = document.querySelector('.lang-text');
 let currentLang = localStorage.getItem('language') || 'id'; // Default to Indonesian
 
-// Set initial language
-langText.textContent = currentLang === 'id' ? 'ID' : 'EN';
-translatePage(currentLang);
-
-languageToggle.addEventListener('click', () => {
-    console.log('Language toggle clicked!');
-    currentLang = currentLang === 'en' ? 'id' : 'en';
-    langText.textContent = currentLang === 'en' ? 'EN' : 'ID';
-    localStorage.setItem('language', currentLang);
-    
-    // Add animation
-    languageToggle.style.transform = 'scale(0.9)';
-    setTimeout(() => {
-        languageToggle.style.transform = 'scale(1)';
-    }, 200);
-    
-    // Translate content
+if (langText) {
+    // Set initial language
+    langText.textContent = currentLang === 'id' ? 'ID' : 'EN';
     translatePage(currentLang);
-});
+}
+
+if (languageToggle && langText) {
+    languageToggle.addEventListener('click', () => {
+        console.log('Language toggle clicked!');
+        currentLang = currentLang === 'en' ? 'id' : 'en';
+        langText.textContent = currentLang === 'en' ? 'EN' : 'ID';
+        localStorage.setItem('language', currentLang);
+        
+        // Add animation
+        languageToggle.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+            languageToggle.style.transform = 'scale(1)';
+        }, 200);
+        
+        // Translate content
+        translatePage(currentLang);
+    });
+}
 
 // Translation function
 function translatePage(lang) {
@@ -147,31 +151,33 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Testimonials Slider
+// Testimonials Slider (only if testimonials exist)
 const testimonialCards = document.querySelectorAll('.testimonial-card');
 const dots = document.querySelectorAll('.dot');
 let currentSlide = 0;
 
-function showSlide(index) {
-    testimonialCards.forEach(card => card.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
-    
-    testimonialCards[index].classList.add('active');
-    dots[index].classList.add('active');
-}
+if (testimonialCards.length > 0 && dots.length > 0) {
+    function showSlide(index) {
+        testimonialCards.forEach(card => card.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        testimonialCards[index].classList.add('active');
+        dots[index].classList.add('active');
+    }
 
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        currentSlide = index;
-        showSlide(currentSlide);
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+        });
     });
-});
 
-// Auto-rotate testimonials
-setInterval(() => {
-    currentSlide = (currentSlide + 1) % testimonialCards.length;
-    showSlide(currentSlide);
-}, 5000);
+    // Auto-rotate testimonials
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % testimonialCards.length;
+        showSlide(currentSlide);
+    }, 5000);
+}
 
 // Scroll animations
 const observerOptions = {
@@ -188,23 +194,19 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Animate service cards
-const serviceCards = document.querySelectorAll('.service-card');
-serviceCards.forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(30px)';
-    card.style.transition = `all 0.6s ease ${index * 0.1}s`;
-    observer.observe(card);
-});
+// Animate service cards (disabled per request - animations handled in CSS now)
+// removed automatic JS animation for service cards to keep layout static
 
-// Animate portfolio items
+// Animate portfolio items (only if present)
 const portfolioItems = document.querySelectorAll('.portfolio-item');
-portfolioItems.forEach((item, index) => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateY(30px)';
-    item.style.transition = `all 0.6s ease ${index * 0.1}s`;
-    observer.observe(item);
-});
+if (portfolioItems.length > 0) {
+    portfolioItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(30px)';
+        item.style.transition = `all 0.6s ease ${index * 0.1}s`;
+        observer.observe(item);
+    });
+}
 
 // Animate feature items
 const featureItems = document.querySelectorAll('.feature-item');

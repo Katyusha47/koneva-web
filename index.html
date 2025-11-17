@@ -13,20 +13,20 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <h2>Kone<span>va</span></h2>
+                    <a href="#home" class="logo-link">
+                        <img src="logo.png" alt="Koneva Logo" class="nav-logo">
+                        <h2 class="logo-text">Kone<span>va</span></h2>
+                    </a>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home" data-lang="nav-home">Beranda</a></li>
                     <li><a href="#services" data-lang="nav-services">Layanan</a></li>
                     <li><a href="#about" data-lang="nav-about">Tentang</a></li>
                     <li><a href="#portfolio" data-lang="nav-portfolio">Portfolio</a></li>
-                    <li><a href="#contact" data-lang="nav-contact">Kontak</a></li>
+                    <!-- contact link intentionally removed from navbar; section remains -->
                 </ul>
                 <div class="nav-controls">
-                    <button id="languageToggle" class="language-btn" aria-label="Change language">
-                        <i class="fas fa-globe"></i>
-                        <span class="lang-text">ID</span>
-                    </button>
+                    <!-- language toggle removed from navbar per request -->
                     <button id="darkModeToggle" class="dark-mode-btn" aria-label="Toggle dark mode">
                         <i class="fas fa-moon"></i>
                     </button>
@@ -145,7 +145,7 @@
                                 </ul>
                             </div>
                             
-                            <div class="service-card">
+                            <div class="service-card recommended center-text">
                                 <div class="service-number">03</div>
                                 <div class="service-icon">
                                     <i class="fas fa-share-alt"></i>
@@ -177,7 +177,7 @@
                                 </ul>
                             </div>
                             
-                            <div class="service-card">
+                            <div class="service-card center-text">
                                 <div class="service-number">05</div>
                                 <div class="service-icon">
                                     <i class="fas fa-video"></i>
@@ -337,115 +337,30 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="portfolio" class="testimonials">
+    <section id="portfolio" class="clients">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag" data-lang="portfolio-tag">Hasil Kerja Kami</span>
-                <h2 data-lang="portfolio-title">Cerita <span>Sukses</span> Klien</h2>
-                <p data-lang="portfolio-desc">Lihat bagaimana kami membantu UMKM seperti Anda meningkatkan penjualan dan berkembang.</p>
+                <span class="section-tag" data-lang="portfolio-tag">Hasil Kerja</span>
+                <h2 data-lang="portfolio-title">Logo Klien <span>UMKM</span></h2>
+                <p data-lang="portfolio-desc">Klien UMKM yang telah bekerja sama dengan Koneva (placeholder logos).</p>
             </div>
-            
-            <div class="testimonial-slider">
-                <button class="slider-btn prev" onclick="moveSlide(-1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                
-                <div class="testimonial-container">
-                    <div class="testimonial-card active">
-                        <div class="testimonial-header">
-                            <img src="https://ui-avatars.com/api/?name=Siti+Nurhaliza&background=6366f1&color=fff&size=80" alt="Siti Nurhaliza" class="testimonial-avatar">
-                            <div class="testimonial-info">
-                                <h4>Siti Nurhaliza</h4>
-                                <p>Toko Baju Online - Jakarta</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Sejak menggunakan jasa Koneva, penjualan online saya meningkat 3x lipat! Sekarang toko saya ramai di Instagram dan marketplace. Terima kasih Koneva!"</p>
-                        <div class="testimonial-result">
-                            <span class="result-badge">+180% Penjualan</span>
-                        </div>
-                    </div>
 
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://ui-avatars.com/api/?name=Budi+Santoso&background=8b5cf6&color=fff&size=80" alt="Budi Santoso" class="testimonial-avatar">
-                            <div class="testimonial-info">
-                                <h4>Budi Santoso</h4>
-                                <p>Catering & Snack - Bandung</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Pesanan catering saya meningkat drastis setelah iklan di Google dan Instagram. Tim Koneva sangat membantu dan mudah dihubungi. Recommended!"</p>
-                        <div class="testimonial-result">
-                            <span class="result-badge">+250% Pesanan</span>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://ui-avatars.com/api/?name=Dewi+Lestari&background=ec4899&color=fff&size=80" alt="Dewi Lestari" class="testimonial-avatar">
-                            <div class="testimonial-info">
-                                <h4>Dewi Lestari</h4>
-                                <p>Salon Kecantikan - Surabaya</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Pelanggan baru terus berdatangan sejak salon saya muncul di pencarian Google. Website yang dibuat juga keren dan profesional. Puas banget!"</p>
-                        <div class="testimonial-result">
-                            <span class="result-badge">+300% Pelanggan Baru</span>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://ui-avatars.com/api/?name=Ahmad+Rizki&background=10b981&color=fff&size=80" alt="Ahmad Rizki" class="testimonial-avatar">
-                            <div class="testimonial-info">
-                                <h4>Ahmad Rizki</h4>
-                                <p>Produk Makanan Rumahan - Yogyakarta</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <p class="testimonial-text">"Dari jualan kecil-kecilan jadi punya puluhan reseller! Koneva membantu saya dari awal sampai bisnis berkembang pesat. Sangat terbantu!"</p>
-                        <div class="testimonial-result">
-                            <span class="result-badge">+400% Omzet</span>
-                        </div>
-                    </div>
+            <div class="logo-ticker">
+                <div class="logo-track">
+                    <img src="https://via.placeholder.com/160x80?text=Logo+1" alt="Logo 1" class="client-logo">
+                    <img src="https://via.placeholder.com/160x80?text=Logo+2" alt="Logo 2" class="client-logo">
+                    <img src="https://via.placeholder.com/160x80?text=Logo+3" alt="Logo 3" class="client-logo">
+                    <img src="https://via.placeholder.com/160x80?text=Logo+4" alt="Logo 4" class="client-logo">
+                    <img src="https://via.placeholder.com/160x80?text=Logo+5" alt="Logo 5" class="client-logo">
+                    <img src="https://via.placeholder.com/160x80?text=Logo+6" alt="Logo 6" class="client-logo">
+                    <img src="https://via.placeholder.com/160x80?text=Logo+7" alt="Logo 7" class="client-logo">
+                    <img src="https://via.placeholder.com/160x80?text=Logo+8" alt="Logo 8" class="client-logo">
+                    <!-- duplicate logos for seamless loop -->
+                    <img src="https://via.placeholder.com/160x80?text=Logo+1" alt="Logo 1" class="client-logo">
+                    <img src="https://via.placeholder.com/160x80?text=Logo+2" alt="Logo 2" class="client-logo">
+                    <img src="https://via.placeholder.com/160x80?text=Logo+3" alt="Logo 3" class="client-logo">
+                    <img src="https://via.placeholder.com/160x80?text=Logo+4" alt="Logo 4" class="client-logo">
                 </div>
-
-                <button class="slider-btn next" onclick="moveSlide(1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-
-            <div class="slider-dots">
-                <span class="dot active" onclick="goToSlide(1)"></span>
-                <span class="dot" onclick="goToSlide(2)"></span>
-                <span class="dot" onclick="goToSlide(3)"></span>
-                <span class="dot" onclick="goToSlide(4)"></span>
             </div>
         </div>
     </section>
@@ -472,16 +387,6 @@
 
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4 data-lang="contact-email-title">Email</h4>
-                            <p><a href="mailto:projects.sanand@gmail.com">projects.sanand@gmail.com</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
                             <i class="fab fa-whatsapp"></i>
                         </div>
                         <div>
@@ -490,28 +395,43 @@
                         </div>
                     </div>
 
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/koneva.umkm/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/6285692498462" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p><a href="https://www.instagram.com/koneva.umkm/" target="_blank">@koneva.umkm</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 data-lang="contact-email-title">Email</h4>
+                            <p><a href="mailto:projects.sanand@gmail.com">projects.sanand@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="social-boxes">
+                        <a class="social-box" href="#" aria-label="social-1"></a>
+                        <a class="social-box" href="#" aria-label="social-2"></a>
+                        <a class="social-box" href="#" aria-label="social-3"></a>
+                        <a class="social-box" href="#" aria-label="social-4"></a>
                     </div>
                 </div>
 
                 <form class="contact-form" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" data-lang-placeholder="form-name" placeholder="Nama Anda" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" data-lang-placeholder="form-phone" placeholder="Nomor Telepon" required>
-                        </div>
+                    <div class="form-group">
+                        <input type="text" data-lang-placeholder="form-name" placeholder="Nama Anda" required>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="email" data-lang-placeholder="form-email" placeholder="Alamat Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" data-lang-placeholder="form-company" placeholder="Nama Perusahaan">
-                        </div>
+                    <div class="form-group">
+                        <input type="tel" data-lang-placeholder="form-phone" placeholder="Nomor Telepon" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-lang-placeholder="form-company" placeholder="Nama Perusahaan (opsional)">
                     </div>
                     <div class="form-group">
                         <textarea data-lang-placeholder="form-message" placeholder="Pesan Anda" rows="5" required></textarea>
