@@ -19,11 +19,11 @@
 
 /* Dark mode variables */
 body.dark-mode {
-    --light-bg: #1e293b;
-    --white: #0f172a;
+    --light-bg: #0a0f1a;
+    --white: #ffffff;
     --text-dark: #ffffff;
-    --text-light: #e2e8f0;
-    --dark-bg: #f8fafc;
+    --text-light: #cbd5e1;
+    --dark-bg: #020617;
 }
 
 body.dark-mode {
