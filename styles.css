@@ -941,22 +941,7 @@ body.dark-mode .hero-wave path {
 }
 
 .service-number {
-    font-size: 3rem;
-    font-weight: 800;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    opacity: 0.3;
-    line-height: 1;
-    margin-bottom: 1rem;
-}
-
-/* Move service number to the bottom of the card visually */
-.service-card .service-number {
-    order: 5;
-    margin-top: 1.5rem;
-    margin-bottom: 0;
+    display: none !important;
 }
 
 .service-card .service-icon { order: 1; }
