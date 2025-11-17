@@ -51,6 +51,7 @@ body.dark-mode .hero h1 {
 body.dark-mode .description {
     grid-template-columns: 1fr 0.9fr;
     gap: 3rem;
+}
 
 body.dark-mode .feature-tag {
     background: rgba(99, 102, 241, 0.3);
@@ -61,10 +62,6 @@ body.dark-mode .feature-tag {
 body.dark-mode .stat-content h3,
 body.dark-mode .mockup-stat .stat-info h4 {
     color: #ffffff;
-
-.contact-form {
-    max-width: 380px;
-}
 }
 
 body.dark-mode .stat-content p,
