@@ -167,6 +167,26 @@ body.dark-mode .footer-logo h2 {
     color: #ffffff;
 }
 
+/* Ensure surface elements (cards/boxes) render dark in dark mode */
+body.dark-mode .value-card,
+body.dark-mode .service-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .portfolio-card,
+body.dark-mode .contact,
+body.dark-mode .contact-form,
+body.dark-mode .social-box {
+    background: #0f172a !important;
+    border-color: #1f2a3a !important;
+    box-shadow: 0 8px 30px rgba(2,6,23,0.6) !important;
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .value-card i,
+body.dark-mode .service-icon i,
+body.dark-mode .contact-icon i {
+    color: var(--primary-color) !important;
+}
+
 body.dark-mode .footer-column h4 {
     color: #ffffff;
 }
