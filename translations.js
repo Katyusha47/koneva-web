@@ -135,8 +135,8 @@ const translations = {
         
         // Portfolio Section
         'portfolio-tag': 'Hasil Kerja Kami',
-        'portfolio-title': 'Cerita <span>Sukses</span> Klien',
-        'portfolio-desc': 'Lihat bagaimana kami membantu UMKM seperti Anda meningkatkan penjualan dan berkembang.',
+        'portfolio-title': 'Klien <span>Kami</span>',
+        'portfolio-desc': 'Klien yang telah bekerja sama dengan Koneva (placeholder logos).',
         
         'portfolio-1-category': 'Fashion & Pakaian',
         'portfolio-1-result': '+180% Penjualan',
@@ -322,8 +322,8 @@ const translations = {
         
         // Portfolio Section
         'portfolio-tag': 'Our Work',
-        'portfolio-title': 'Client Success <span>Stories</span>',
-        'portfolio-desc': 'See how we help SMEs like you increase sales and grow.',
+        'portfolio-title': 'Our <span>Clients</span>',
+        'portfolio-desc': 'Clients who have worked with Koneva (placeholder logos).',
         
         'portfolio-1-category': 'Fashion & Clothing',
         'portfolio-1-result': '+180% Sales',

@@ -1159,6 +1159,7 @@ body.dark-mode .hero-wave path {
     display: flex;
     gap: 2rem;
     align-items: center;
+    justify-content: center;
     animation: scroll-left 20s linear infinite;
 }
 
