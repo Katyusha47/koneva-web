@@ -154,6 +154,15 @@ body.dark-mode .contact-item p {
     color: var(--white);
 }
 
+/* Ensure icons are visible in dark mode (override variable change) */
+body.dark-mode .social-box i {
+    color: #ffffff !important;
+}
+
+.social-box i {
+    font-size: 1.15rem;
+}
+
 body.dark-mode .footer-logo h2 {
     color: #ffffff;
 }
