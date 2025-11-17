@@ -141,6 +141,19 @@ body.dark-mode .contact-item p {
     border: 1px solid rgba(255,255,255,0.03);
 }
 
+.social-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.05rem;
+    text-decoration: none;
+}
+
+.social-box i {
+    color: var(--white);
+}
+
 body.dark-mode .footer-logo h2 {
     color: #ffffff;
 }
