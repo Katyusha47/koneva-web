@@ -1066,12 +1066,16 @@ body.dark-mode .hero-wave path {
 
 /* Service Card Enhancements for UMKM Focus */
 .services-grid.main-services {
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .service-card.featured {
-  padding: 3rem;
+    padding: 3rem;
+    max-width: 100%;
 }
 
 .service-packages,
