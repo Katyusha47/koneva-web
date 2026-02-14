@@ -426,59 +426,69 @@ socialLinks.forEach(link => {
 console.log('Website loaded successfully! 🚀');
 
 // Interactive Services
-// Interactive Services
+// Interactive Services - Robust Implementation
+function toggleService(btn) {
+    console.log('Toggle service triggered for:', btn);
+    const details = btn.nextElementSibling;
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    
+    // Toggle current
+    btn.setAttribute('aria-expanded', !isExpanded);
+    
+    // Update button visual
+    const icon = btn.querySelector('i');
+    const text = btn.querySelector('span');
+    
+    if (!isExpanded) {
+        // Expanding
+        btn.classList.add('active');
+        if(icon) {
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+        }
+        if(text) text.textContent = 'Tutup';
+        
+        details.hidden = false;
+        details.style.display = 'block';
+        
+        // Small timeout to allow display transform to happen
+        requestAnimationFrame(() => {
+            details.classList.add('active');
+            details.style.opacity = '1';
+            details.style.transform = 'translateY(0)';
+        });
+    } else {
+        // Collapsing
+        btn.classList.remove('active');
+        if(icon) {
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+        }
+        if(text) text.textContent = 'Lihat Paket';
+        
+        details.classList.remove('active');
+        details.style.opacity = '0';
+        details.style.transform = 'translateY(-20px)';
+        
+        // Wait for animation to finish before hiding
+        setTimeout(() => {
+            details.hidden = true;
+            details.style.display = 'none';
+        }, 300);
+    }
+}
+
+// Attach event listeners when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     const toggleServiceBtns = document.querySelectorAll('.toggle-service-btn');
-    console.log('Found toggle buttons:', toggleServiceBtns.length);
+    console.log('Found toggle buttons on load:', toggleServiceBtns.length);
 
     toggleServiceBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent any default action
-            console.log('Button clicked:', btn);
-            
-            const details = btn.nextElementSibling;
-            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-            
-            // Toggle current
-            btn.setAttribute('aria-expanded', !isExpanded);
-            
-            // Update button visual
-            const icon = btn.querySelector('i');
-            const text = btn.querySelector('span');
-            
-            if (!isExpanded) {
-                // Expanding
-                btn.classList.add('active');
-                icon.classList.remove('fa-chevron-down');
-                icon.classList.add('fa-chevron-up');
-                text.textContent = 'Tutup';
-                
-                details.hidden = false;
-                details.style.display = 'block';
-                
-                // Small timeout to allow display transform to happen
-                requestAnimationFrame(() => {
-                    details.classList.add('active');
-                    details.style.opacity = '1';
-                    details.style.transform = 'translateY(0)';
-                });
-            } else {
-                // Collapsing
-                btn.classList.remove('active');
-                icon.classList.remove('fa-chevron-up');
-                icon.classList.add('fa-chevron-down');
-                text.textContent = 'Lihat Paket';
-                
-                details.classList.remove('active');
-                details.style.opacity = '0';
-                details.style.transform = 'translateY(-20px)';
-                
-                // Wait for animation to finish before hiding
-                setTimeout(() => {
-                    details.hidden = true;
-                    details.style.display = 'none';
-                }, 300);
-            }
-        });
+        // Remove old listeners to be safe (though cloning is better, consistent logic is enough)
+        btn.onclick = (e) => {
+            e.preventDefault();
+            toggleService(btn);
+        };
     });
 });
+

@@ -933,13 +933,14 @@ body.dark-mode .hero-wave path {
   background: var(--white);
   padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  transition: none; /* disable card animations per request */
-  border: 2px solid transparent;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .service-card::before {
@@ -1033,6 +1034,7 @@ body.dark-mode .hero-wave path {
   background: transparent;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
+  margin-top: auto; /* Push to bottom */
 }
 
 .toggle-service-btn:hover,
