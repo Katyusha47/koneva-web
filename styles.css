@@ -1041,6 +1041,39 @@ body.dark-mode .hero-wave path {
   color: var(--white);
 }
 
+/* Toggle Button */
+.toggle-service-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.toggle-service-btn:hover,
+.toggle-service-btn.active {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+/* Service Details (Hidden by default) */
+.service-details {
+  display: none;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+}
+
+.service-details.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .service-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
