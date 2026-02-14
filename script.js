@@ -391,6 +391,8 @@ function showSlide(n) {
     const slides = document.querySelectorAll('.testimonial-card');
     const dots = document.querySelectorAll('.dot');
     
+    if (slides.length === 0) return; // Guard clause
+    
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
     
@@ -398,12 +400,14 @@ function showSlide(n) {
         slide.classList.remove('active');
     });
     
-    dots.forEach(dot => {
-        dot.classList.remove('active');
-    });
+    if (dots.length > 0) {
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+        if (dots[slideIndex - 1]) dots[slideIndex - 1].classList.add('active');
+    }
     
-    slides[slideIndex - 1].classList.add('active');
-    dots[slideIndex - 1].classList.add('active');
+    if (slides[slideIndex - 1]) slides[slideIndex - 1].classList.add('active');
 }
 
 // Auto play testimonial slider
