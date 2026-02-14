@@ -990,26 +990,10 @@ body.dark-mode .hero-wave path {
   display: none !important;
 }
 
-.service-card .service-icon {
-  order: 1;
-}
-.service-card h3 {
-  order: 2;
-}
-.service-card > p {
-  order: 3;
-}
-.service-card .service-packages,
-.service-card .service-features {
-  order: 4;
-}
 .service-card .service-list {
-  order: 5;
   margin-top: 1rem;
 }
-.service-card .service-cta {
-  order: 6;
-}
+
 
 .service-icon {
   width: 70px;
