@@ -1422,6 +1422,12 @@ body.dark-mode .service-features h4 {
   padding: 0 60px;
 }
 
+/* Clients Section */
+.clients {
+  padding: 120px 0;
+  background: var(--white);
+}
+
 /* Logo ticker for client logos (auto-scrolling) */
 .logo-ticker {
   margin: 4rem auto;
