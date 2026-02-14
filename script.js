@@ -27,7 +27,6 @@ if (isDarkMode) {
 }
 
 darkModeToggle.addEventListener('click', () => {
-    console.log('Dark mode toggle clicked!');
     body.classList.toggle('dark-mode');
     const darkModeEnabled = body.classList.contains('dark-mode');
     localStorage.setItem('darkMode', darkModeEnabled);
@@ -52,7 +51,6 @@ if (langText) {
 
 if (languageToggle && langText) {
     languageToggle.addEventListener('click', () => {
-        console.log('Language toggle clicked!');
         currentLang = currentLang === 'en' ? 'id' : 'en';
         langText.textContent = currentLang === 'en' ? 'EN' : 'ID';
         localStorage.setItem('language', currentLang);
@@ -374,13 +372,11 @@ let slideIndex = 1;
 
 // Make functions global
 window.moveSlide = function(n) {
-    console.log('moveSlide called with n:', n);
     slideIndex += n;
     showSlide(slideIndex);
 }
 
 window.goToSlide = function(n) {
-    console.log('goToSlide called with n:', n);
     slideIndex = n;
     showSlide(slideIndex);
 }
@@ -427,12 +423,11 @@ socialLinks.forEach(link => {
     });
 });
 
-console.log('Website loaded successfully! 🚀');
+
 
 // Interactive Services
 // Interactive Services - Robust Implementation
 function toggleService(btn) {
-    console.log('Toggle service triggered for:', btn);
     const details = btn.nextElementSibling;
     const isExpanded = btn.getAttribute('aria-expanded') === 'true';
     
@@ -485,7 +480,6 @@ function toggleService(btn) {
 // Attach event listeners when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     const toggleServiceBtns = document.querySelectorAll('.toggle-service-btn');
-    console.log('Found toggle buttons on load:', toggleServiceBtns.length);
 
     toggleServiceBtns.forEach(btn => {
         // Remove old listeners to be safe (though cloning is better, consistent logic is enough)
