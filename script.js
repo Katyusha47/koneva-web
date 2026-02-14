@@ -426,47 +426,59 @@ socialLinks.forEach(link => {
 console.log('Website loaded successfully! 🚀');
 
 // Interactive Services
-const toggleServiceBtns = document.querySelectorAll('.toggle-service-btn');
+// Interactive Services
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleServiceBtns = document.querySelectorAll('.toggle-service-btn');
+    console.log('Found toggle buttons:', toggleServiceBtns.length);
 
-toggleServiceBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const details = btn.nextElementSibling;
-        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-        
-        // Toggle current
-        btn.setAttribute('aria-expanded', !isExpanded);
-        details.hidden = isExpanded;
-        
-        // Update button visual
-        const icon = btn.querySelector('i');
-        const text = btn.querySelector('span');
-        
-        if (!isExpanded) {
-            btn.classList.add('active');
-            icon.classList.remove('fa-chevron-down');
-            icon.classList.add('fa-chevron-up');
-            text.textContent = 'Tutup';
-            details.style.display = 'block'; // Ensure block display for animation
-            // Small timeout to allow display transform to happen
-            setTimeout(() => {
-                details.classList.add('active');
-                details.style.opacity = '1';
-                details.style.transform = 'translateY(0)';
-            }, 10);
-        } else {
-            btn.classList.remove('active');
-            icon.classList.remove('fa-chevron-up');
-            icon.classList.add('fa-chevron-down');
-            text.textContent = 'Lihat Paket';
-            details.classList.remove('active');
-            details.style.opacity = '0';
-            details.style.transform = 'translateY(-20px)';
+    toggleServiceBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent any default action
+            console.log('Button clicked:', btn);
             
-            // Wait for animation to finish before hiding
-            setTimeout(() => {
-                details.hidden = true;
-                details.style.display = 'none';
-            }, 300);
-        }
+            const details = btn.nextElementSibling;
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            
+            // Toggle current
+            btn.setAttribute('aria-expanded', !isExpanded);
+            
+            // Update button visual
+            const icon = btn.querySelector('i');
+            const text = btn.querySelector('span');
+            
+            if (!isExpanded) {
+                // Expanding
+                btn.classList.add('active');
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+                text.textContent = 'Tutup';
+                
+                details.hidden = false;
+                details.style.display = 'block';
+                
+                // Small timeout to allow display transform to happen
+                requestAnimationFrame(() => {
+                    details.classList.add('active');
+                    details.style.opacity = '1';
+                    details.style.transform = 'translateY(0)';
+                });
+            } else {
+                // Collapsing
+                btn.classList.remove('active');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+                text.textContent = 'Lihat Paket';
+                
+                details.classList.remove('active');
+                details.style.opacity = '0';
+                details.style.transform = 'translateY(-20px)';
+                
+                // Wait for animation to finish before hiding
+                setTimeout(() => {
+                    details.hidden = true;
+                    details.style.display = 'none';
+                }, 300);
+            }
+        });
     });
 });
