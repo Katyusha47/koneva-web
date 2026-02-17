@@ -524,7 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let waText = `Halo Koneva, saya ingin berkonsultasi.\n\n`;
             waText += `*Nama:* ${name}\n`;
             waText += `*No. HP:* ${phone}\n`;
-            waText += `*Perusahaan:* ${company}\n`; // Always include per request
+            waText += `*Perusahaan:* ${company}\n`;
             waText += `*Pesan:* ${message}`;
             
             // Encode the full message for URL
