@@ -1914,6 +1914,30 @@ body.dark-mode .service-features h4 {
   color: var(--primary-color);
 }
 
+.footer-social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-social-icons a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.footer-social-icons a:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+}
+
 .footer-bottom {
   border-top: 1px solid #334155;
   padding-top: 2rem;
