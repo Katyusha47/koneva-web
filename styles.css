@@ -867,8 +867,28 @@ body.dark-mode .hero-wave path {
   background-clip: text;
 }
 
-.services-tabs {
-  margin-top: 3rem;
+.services-tabs,
+.service-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.tab-content {
+  display: none !important;
+  animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+  display: grid;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .tabs-navigation {
