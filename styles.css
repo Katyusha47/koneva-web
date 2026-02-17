@@ -55,7 +55,7 @@ body.dark-mode .description {
 
 body.dark-mode .feature-tag {
   background: rgba(99, 102, 241, 0.3);
-  color: #07d707;
+  color: #ffffff;
   border-color: rgba(99, 102, 241, 0.4);
 }
 
@@ -591,7 +591,7 @@ body.dark-mode .hero {
 }
 
 .feature-tag i {
-  color: #a5b4fc;
+  color: #22c55e; /* Green color */
 }
 
 .hero-buttons {
@@ -2077,8 +2077,20 @@ body.dark-mode .service-features h4 {
   }
 
   .hero-features {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .feature-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  /* Make first feature take full width on mobile to force 2 & 3 side-by-side if needed */
+  .feature-tag:first-child {
+    width: 100%;
+    justify-content: center;
   }
 
   .hero-image {
