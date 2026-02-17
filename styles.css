@@ -883,7 +883,7 @@ body.dark-mode .hero-wave path {
 }
 
 .tab-content.active {
-  display: grid;
+  display: grid !important;
 }
 
 @keyframes fadeIn {
