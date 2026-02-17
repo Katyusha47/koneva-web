@@ -1245,7 +1245,8 @@ body.dark-mode .hero-wave path {
 }
 
 .service-cta {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 0.7rem;
   background: var(--gradient);
@@ -1254,7 +1255,8 @@ body.dark-mode .hero-wave path {
   border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
-  margin-top: 2rem;
+  margin-top: auto;
+  width: 100%;
   transition: all 0.3s;
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
