@@ -583,10 +583,10 @@ body.dark-mode .hero {
   align-items: center;
   gap: 0.5rem;
   background: rgba(99, 102, 241, 0.2);
-  padding: 0.5rem 1rem;
+  padding: 0.1rem 1rem;
   border-radius: 20px;
   color: #e0e7ff;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
