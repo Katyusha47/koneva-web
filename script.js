@@ -510,23 +510,28 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form values using IDs to avoid selector errors
-            const name = document.getElementById('formName').value.trim();
-            const phone = document.getElementById('formPhone').value.trim();
-            const company = document.getElementById('formCompany').value.trim();
-            const message = document.getElementById('formMessage').value.trim();
+            // Use FormData for reliable value retrieval
+            const formData = new FormData(this);
+            const name = formData.get('name') || '';
+            const phone = formData.get('phone') || '';
+            const company = formData.get('company') || '';
+            const message = formData.get('message') || '';
             
             console.log('Sending WhatsApp Message:', { name, phone, company, message });
 
-            // Construct WhatsApp message
-            let waMessage = `Halo Koneva, saya ingin berkonsultasi.%0A%0A`;
-            waMessage += `*Nama:* ${name}%0A`;
-            waMessage += `*No. HP:* ${phone}%0A`;
-            if (company) waMessage += `*Perusahaan:* ${company}%0A`;
-            waMessage += `*Pesan:* ${message}`;
+            // Construct readable message
+            // Note: encodeURIComponent handles special chars properly
+            let waText = `Halo Koneva, saya ingin berkonsultasi.\n\n`;
+            waText += `*Nama:* ${name}\n`;
+            waText += `*No. HP:* ${phone}\n`;
+            waText += `*Perusahaan:* ${company}\n`; // Always include per request
+            waText += `*Pesan:* ${message}`;
+            
+            // Encode the full message for URL
+            const encodedText = encodeURIComponent(waText);
             
             // WhatsApp API URL
-            const waUrl = `https://wa.me/6285166194191?text=${waMessage}`;
+            const waUrl = `https://wa.me/6285166194191?text=${encodedText}`;
             
             // Open in new tab
             window.open(waUrl, '_blank');
