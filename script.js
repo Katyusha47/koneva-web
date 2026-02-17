@@ -479,6 +479,21 @@ function toggleService(btn) {
 
 // Attach event listeners when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+    // Client Logo Loop Logic
+    const logoTrack = document.querySelector('.logo-track');
+    if (logoTrack) {
+        const logos = Array.from(logoTrack.children);
+        // Only loop if more than 5 logos
+        if (logos.length > 5) {
+            // Clone logos for seamless loop
+            logos.forEach(logo => {
+                const clone = logo.cloneNode(true);
+                logoTrack.appendChild(clone);
+            });
+            logoTrack.classList.add('animate');
+        }
+    }
+
     const toggleServiceBtns = document.querySelectorAll('.toggle-service-btn');
 
     toggleServiceBtns.forEach(btn => {

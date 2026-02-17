@@ -1445,8 +1445,13 @@ body.dark-mode .service-features h4 {
   display: flex;
   gap: 2rem;
   align-items: center;
-  width: max-content; /* Ensure track takes full width of content */
-  animation: scroll-left 30s linear infinite; /* Slower for better visibility */
+  justify-content: center; /* Center by default */
+  width: 100%; /* Static width */
+}
+
+.logo-track.animate {
+  width: max-content; /* Full width for animation */
+  animation: scroll-left 30s linear infinite;
 }
 
 .client-logo {
