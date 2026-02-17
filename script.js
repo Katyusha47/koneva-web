@@ -294,7 +294,7 @@ valueCards.forEach((card, index) => {
 // Remove service button code since buttons are removed
 
 // CTA buttons
-const ctaButtons = document.querySelectorAll('.cta-btn, .btn-primary');
+const ctaButtons = document.querySelectorAll('.cta-btn');
 ctaButtons.forEach(button => {
     button.addEventListener('click', (e) => {
         if (!button.closest('form')) {
