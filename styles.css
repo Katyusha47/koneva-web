@@ -581,7 +581,7 @@ body.dark-mode .hero {
 .feature-tag {
   display: flex;
   align-items: center;
-  gap: 0.1rem;
+  gap: 0.5rem;
   background: rgba(99, 102, 241, 0.2);
   padding: 0.3rem 1rem;
   border-radius: 20px;
