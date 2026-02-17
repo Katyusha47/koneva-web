@@ -2107,8 +2107,15 @@ body.dark-mode .service-features h4 {
   }
   
   .feature-tag {
-    font-size: 0.8rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    text-align: center;
+    white-space: normal;
+    line-height: 1.2;
+    height: 100%; /* Ensure equal height */
+    justify-content: center;
+    width: 100%; /* Ensure they fill the grid cell */
+    align-items: center;
   }
   
   /* Make first feature take full width on mobile to force 2 & 3 side-by-side if needed */

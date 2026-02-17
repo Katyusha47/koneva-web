@@ -511,11 +511,13 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             
             // Get form values using IDs to avoid selector errors
-            const name = document.getElementById('formName').value;
-            const phone = document.getElementById('formPhone').value;
-            const company = document.getElementById('formCompany').value;
-            const message = document.getElementById('formMessage').value;
+            const name = document.getElementById('formName').value.trim();
+            const phone = document.getElementById('formPhone').value.trim();
+            const company = document.getElementById('formCompany').value.trim();
+            const message = document.getElementById('formMessage').value.trim();
             
+            console.log('Sending WhatsApp Message:', { name, phone, company, message });
+
             // Construct WhatsApp message
             let waMessage = `Halo Koneva, saya ingin berkonsultasi.%0A%0A`;
             waMessage += `*Nama:* ${name}%0A`;
