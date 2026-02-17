@@ -1964,7 +1964,7 @@ body.dark-mode .service-features h4 {
 
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 1rem;
   }
 
   .hero h1 {
