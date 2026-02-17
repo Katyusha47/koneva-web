@@ -1445,8 +1445,8 @@ body.dark-mode .service-features h4 {
   display: flex;
   gap: 2rem;
   align-items: center;
-  justify-content: center;
-  animation: scroll-left 20s linear infinite;
+  width: max-content; /* Ensure track takes full width of content */
+  animation: scroll-left 30s linear infinite; /* Slower for better visibility */
 }
 
 .client-logo {
@@ -1456,6 +1456,7 @@ body.dark-mode .service-features h4 {
   background: #f3f4f6;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0; /* Prevent logos from shrinking */
 }
 
 @keyframes scroll-left {
