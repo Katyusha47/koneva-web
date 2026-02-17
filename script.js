@@ -216,37 +216,7 @@ featureItems.forEach((item, index) => {
 });
 
 // Contact Form Handling
-const contactForm = document.querySelector('.contact-form');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    
-    // Show success message (you can customize this)
-    alert('Thank you for your message! We will get back to you soon.');
-    
-    // Reset form
-    contactForm.reset();
-    
-    // Here you would typically send the data to a server
-    // Example using fetch:
-    /*
-    fetch('/api/contact', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert('Message sent successfully!');
-        contactForm.reset();
-    })
-    .catch(error => {
-        alert('There was an error sending your message. Please try again.');
-    });
-    */
-});
+// Contact Form handling moved to WhatsApp integration below
 
 // Add parallax effect to hero section
 window.addEventListener('scroll', () => {
@@ -505,37 +475,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // WhatsApp Form Submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+
+        const contactForm = document.getElementById("contactForm");
+
+        if (!contactForm) return;
+
+        contactForm.addEventListener("submit", function (e) {
             e.preventDefault();
-            
-            // Use FormData for reliable value retrieval
-            const formData = new FormData(this);
-            const name = formData.get('name') || '';
-            const phone = formData.get('phone') || '';
-            const company = formData.get('company') || '';
-            const message = formData.get('message') || '';
-            // Construct readable message
-            // Note: encodeURIComponent handles special chars properly
-            let waText = `Halo Koneva, saya ingin berkonsultasi.\n\n`;
-            waText += `*Nama:* ${name}\n`;
-            waText += `*No. HP:* ${phone}\n`;
-            waText += `*Perusahaan:* ${company}\n`;
-            waText += `*Pesan:* ${message}`;
-            
-            // Encode the full message for URL
+
+            // Get form data safely
+            const formData = new FormData(contactForm);
+
+            const name = (formData.get("name") || "").trim();
+            const phone = (formData.get("phone") || "").trim();
+            const company = (formData.get("company") || "").trim();
+            const message = (formData.get("message") || "").trim();
+
+            // Construct WhatsApp message
+            const waText =
+            `Halo Koneva, saya ingin berkonsultasi.
+
+            *Nama:* ${name}
+            *No. HP:* ${phone}
+            *Perusahaan:* ${company}
+            *Pesan:* ${message}`;
+
+            // Encode message
             const encodedText = encodeURIComponent(waText);
-            
-            // WhatsApp API URL
-            const waUrl = `https://wa.me/6285166194191?text=${encodedText}`;
-            
-            // Open in new tab
-            window.open(waUrl, '_blank');
-            
-            // Optional: Reset form
-            this.reset();
+
+            // IMPORTANT: remove spaces, dashes, or symbols from phone number
+            const waNumber = "6285166194191";
+
+            // Final WhatsApp URL
+            const waUrl = `https://wa.me/${waNumber}?text=${encodedText}`;
+
+            // Open WhatsApp
+            window.open(waUrl, "_blank", "noopener,noreferrer");
+
+            // Reset form
+            contactForm.reset();
         });
-    }
+
 });
 
