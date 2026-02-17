@@ -510,11 +510,11 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form values
-            const name = this.querySelector('input[type="text"]:nth-of-type(1)').value;
-            const phone = this.querySelector('input[type="tel"]').value;
-            const company = this.querySelector('input[type="text"]:nth-of-type(2)').value;
-            const message = this.querySelector('textarea').value;
+            // Get form values using IDs to avoid selector errors
+            const name = document.getElementById('formName').value;
+            const phone = document.getElementById('formPhone').value;
+            const company = document.getElementById('formCompany').value;
+            const message = document.getElementById('formMessage').value;
             
             // Construct WhatsApp message
             let waMessage = `Halo Koneva, saya ingin berkonsultasi.%0A%0A`;
@@ -523,7 +523,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (company) waMessage += `*Perusahaan:* ${company}%0A`;
             waMessage += `*Pesan:* ${message}`;
             
-            // WhatsApp API URL (using the number provided in footer: 6285692498462)
+            // WhatsApp API URL
             const waUrl = `https://wa.me/6285166194191?text=${waMessage}`;
             
             // Open in new tab
