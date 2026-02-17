@@ -1964,7 +1964,7 @@ body.dark-mode .service-features h4 {
 
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 3rem;
   }
 
   .hero h1 {
@@ -2079,7 +2079,7 @@ body.dark-mode .service-features h4 {
   .hero-features {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+    gap: 0.1rem;
   }
   
   .feature-tag {
