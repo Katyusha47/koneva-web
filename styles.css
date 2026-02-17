@@ -2077,9 +2077,9 @@ body.dark-mode .service-features h4 {
   }
 
   .hero-features {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
   }
   
   .feature-tag {
@@ -2088,9 +2088,15 @@ body.dark-mode .service-features h4 {
   }
   
   /* Make first feature take full width on mobile to force 2 & 3 side-by-side if needed */
+  /* Make first feature take full width on mobile */
   .feature-tag:first-child {
-    width: 100%;
+    grid-column: 1 / -1;
     justify-content: center;
+  }
+
+  .feature-tag {
+    justify-content: center;
+    width: 100%; /* Ensure they fill the grid cell */
   }
 
   .hero-image {
