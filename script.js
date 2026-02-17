@@ -516,9 +516,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const phone = formData.get('phone') || '';
             const company = formData.get('company') || '';
             const message = formData.get('message') || '';
-            
-            console.log('Sending WhatsApp Message:', { name, phone, company, message });
-
             // Construct readable message
             // Note: encodeURIComponent handles special chars properly
             let waText = `Halo Koneva, saya ingin berkonsultasi.\n\n`;
