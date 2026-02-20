@@ -11,7 +11,7 @@ const packageDetails = {
       'Caption & Hashtag Strategis',
       'Laporan Performa Bulanan'
     ],
-    waMessage: 'Permisi, saya ingin memilih Paket A'
+    waMessage: 'Permisi, saya ingin mengetahui lebih lanjut tentang Paket A'
   },
   'paket-b': {
     icon: 'fa-chart-bar',
@@ -25,7 +25,7 @@ const packageDetails = {
       'Konsultasi Strategi Bulanan',
       'Laporan & Analisis Performa'
     ],
-    waMessage: 'Permisi, saya ingin memilih Paket B'
+    waMessage: 'Permisi, saya ingin mengetahui lebih lanjut tentang Paket B'
   },
   'paket-c': {
     icon: 'fa-bullhorn',
@@ -40,7 +40,7 @@ const packageDetails = {
       'Konsultasi & Review Mingguan',
       'Laporan Komprehensif Bulanan'
     ],
-    waMessage: 'Permisi, saya ingin memilih Paket C'
+    waMessage: 'Permisi, saya ingin mengetahui lebih lanjut tentang Paket C'
   },
   'video-company-profile': {
     icon: 'fa-video',
@@ -54,7 +54,7 @@ const packageDetails = {
       'Durasi Video 3–5 Menit',
       'Revisi hingga 2x'
     ],
-    waMessage: 'Permisi, saya ingin memilih Video Company Profile'
+    waMessage: 'Permisi, saya ingin mengetahui lebih lanjut tentang Video Company Profile'
   }
 };
 
