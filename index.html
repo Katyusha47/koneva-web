@@ -112,10 +112,10 @@
                         <li><i class="fas fa-check-circle"></i> <span>Point 3 Description</span></li>
                     </ul>
 
-                    <a href="https://wa.me/6285166194191?text=Halo%20Koneva,%20saya%20tertarik%20dengan%20Digital%20Marketing%20-%20Paket%20A." class="service-cta" target="_blank">
+                    <button class="service-cta pilih-btn" data-package="paket-a">
                         <span>Pilih Paket</span>
                         <i class="fas fa-arrow-right"></i>
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Paket B -->
@@ -132,10 +132,10 @@
                         <li><i class="fas fa-check-circle"></i> <span>Point 3 Description</span></li>
                     </ul>
 
-                    <a href="https://wa.me/6285166194191?text=Halo%20Koneva,%20saya%20tertarik%20dengan%20Digital%20Marketing%20-%20Paket%20B." class="service-cta" target="_blank">
+                    <button class="service-cta pilih-btn" data-package="paket-b">
                         <span>Pilih Paket</span>
                         <i class="fas fa-arrow-right"></i>
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Paket C -->
@@ -152,10 +152,10 @@
                         <li><i class="fas fa-check-circle"></i> <span>Point 3 Description</span></li>
                     </ul>
 
-                    <a href="https://wa.me/6285166194191?text=Halo%20Koneva,%20saya%20tertarik%20dengan%20Digital%20Marketing%20-%20Paket%20C." class="service-cta" target="_blank">
+                    <button class="service-cta pilih-btn" data-package="paket-c">
                         <span>Pilih Paket</span>
                         <i class="fas fa-arrow-right"></i>
-                    </a>
+                    </button>
                 </div>
             </div>
 
@@ -176,10 +176,10 @@
                         <li><i class="fas fa-check-circle"></i> <span>Licensed Music</span></li>
                     </ul>
 
-                    <a href="https://wa.me/6285166194191?text=Halo%20Koneva,%20saya%20tertarik%20dengan%20Video%20Company%20Profile." class="service-cta" target="_blank">
+                    <button class="service-cta pilih-btn" data-package="video-company-profile">
                         <span>Pilih</span>
                         <i class="fas fa-arrow-right"></i>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -328,6 +328,23 @@
             </div>
         </div>
     </footer>
+
+    <!-- Package Detail Modal -->
+    <div id="packageModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose" aria-label="Tutup">&times;</button>
+            <div class="modal-icon-wrap">
+                <div class="modal-icon"><i id="modalIcon" class="fas fa-rocket"></i></div>
+            </div>
+            <h3 id="modalTitle" class="modal-title"></h3>
+            <p id="modalDesc" class="modal-desc"></p>
+            <ul id="modalFeatures" class="modal-features"></ul>
+            <a id="modalCheckout" class="modal-checkout" href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i>
+                <span>Checkout via WhatsApp</span>
+            </a>
+        </div>
+    </div>
 
     <script src="translations.js"></script>
     <script src="script.js?v=2"></script>

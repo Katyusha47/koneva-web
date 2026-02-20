@@ -1,3 +1,120 @@
+// ── Package Detail Modal ──
+const packageDetails = {
+  'paket-a': {
+    icon: 'fa-rocket',
+    title: 'Paket A',
+    description: 'Paket perdana yang dirancang khusus untuk UMKM yang baru memulai perjalanan digital. Kami bantu bangun fondasi konten yang kuat dan konsisten di media sosial Anda.',
+    features: [
+      'Manajemen 1 Platform Media Sosial',
+      '8 Konten Feed per Bulan',
+      'Desain Grafis Profesional',
+      'Caption & Hashtag Strategis',
+      'Laporan Performa Bulanan'
+    ],
+    waMessage: 'Permisi, saya ingin memilih Paket A'
+  },
+  'paket-b': {
+    icon: 'fa-chart-bar',
+    title: 'Paket B',
+    description: 'Solusi menengah untuk bisnis yang ingin memperluas jangkauan digital dengan strategi konten yang lebih beragam dan frekuensi posting yang lebih tinggi.',
+    features: [
+      'Manajemen 2 Platform Media Sosial',
+      '16 Konten Feed per Bulan',
+      'Konten Video Reels / TikTok',
+      'Riset Tren & Kompetitor',
+      'Konsultasi Strategi Bulanan',
+      'Laporan & Analisis Performa'
+    ],
+    waMessage: 'Permisi, saya ingin memilih Paket B'
+  },
+  'paket-c': {
+    icon: 'fa-bullhorn',
+    title: 'Paket C',
+    description: 'Paket lengkap untuk bisnis yang serius tumbuh secara digital. Termasuk iklan berbayar dan pengelolaan multi-platform secara penuh oleh tim Koneva.',
+    features: [
+      'Manajemen 3+ Platform Media Sosial',
+      '24 Konten Feed per Bulan',
+      'Produksi Video & Reels Premium',
+      'Iklan Berbayar (Meta/Google Ads)',
+      'Riset Mendalam & Strategi Konten',
+      'Konsultasi & Review Mingguan',
+      'Laporan Komprehensif Bulanan'
+    ],
+    waMessage: 'Permisi, saya ingin memilih Paket C'
+  },
+  'video-company-profile': {
+    icon: 'fa-video',
+    title: 'Video Company Profile',
+    description: 'Tampilkan wajah terbaik bisnis Anda melalui video profil perusahaan yang sinematik dan profesional. Diproduksi oleh tim kreatif kami dari awal hingga akhir.',
+    features: [
+      'Professional Shooting On-Location',
+      'High Quality Editing & Color Grading',
+      'Script & Storyboard Planning',
+      'Licensed Background Music',
+      'Durasi Video 3–5 Menit',
+      'Revisi hingga 2x'
+    ],
+    waMessage: 'Permisi, saya ingin memilih Video Company Profile'
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('packageModal');
+  const closeBtn = document.getElementById('modalClose');
+  const modalIcon = document.getElementById('modalIcon');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDesc = document.getElementById('modalDesc');
+  const modalFeatures = document.getElementById('modalFeatures');
+  const modalCheckout = document.getElementById('modalCheckout');
+
+  function openModal(packageKey) {
+    const pkg = packageDetails[packageKey];
+    if (!pkg) return;
+
+    // Set icon
+    modalIcon.className = 'fas ' + pkg.icon;
+
+    // Set content
+    modalTitle.textContent = pkg.title;
+    modalDesc.textContent = pkg.description;
+
+    // Build features list
+    modalFeatures.innerHTML = pkg.features
+      .map(f => `<li><i class="fas fa-check-circle"></i><span>${f}</span></li>`)
+      .join('');
+
+    // Set checkout link
+    const waUrl = 'https://wa.me/6285166194191?text=' + encodeURIComponent(pkg.waMessage);
+    modalCheckout.href = waUrl;
+
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Open modal on Pilih button click
+  document.querySelectorAll('.pilih-btn').forEach(btn => {
+    btn.addEventListener('click', () => openModal(btn.dataset.package));
+  });
+
+  // Close on X button
+  closeBtn.addEventListener('click', closeModal);
+
+  // Close on overlay click (outside card)
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+});
+
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
