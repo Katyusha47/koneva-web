@@ -1124,6 +1124,16 @@ body.dark-mode .hero-wave path {
     max-width: 100%;
 }
 
+#video-profile.services-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  #video-profile.services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .service-packages,
 .service-features {
   margin: 2rem 0;
