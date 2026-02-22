@@ -1630,6 +1630,21 @@ body.dark-mode .service-features h4 {
   animation: scroll-left 30s linear infinite;
 }
 
+.client-logo-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.client-logo-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(99, 102, 241, 0.2);
+}
+
 .client-logo {
   width: 180px;
   height: 120px;
@@ -1637,7 +1652,26 @@ body.dark-mode .service-features h4 {
   background: #f3f4f6;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  flex-shrink: 0; /* Prevent logos from shrinking */
+  display: block;
+}
+
+/* Client detail modal */
+.client-modal-card {
+  text-align: center;
+}
+
+.client-modal-logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.client-modal-logo {
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 @keyframes scroll-left {

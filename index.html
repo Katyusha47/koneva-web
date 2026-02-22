@@ -228,8 +228,12 @@
 
             <div class="logo-ticker">
                 <div class="logo-track">
-                    <img src="img/bigstamp.jpg" alt="Bigstamp" class="client-logo">
-                    <img src="img/kaosgurita.jpeg" alt="Kaos Gurita" class="client-logo">
+                    <button class="client-logo-btn" data-client="bigstamp">
+                        <img src="img/bigstamp.jpg" alt="Bigstamp" class="client-logo">
+                    </button>
+                    <button class="client-logo-btn" data-client="kaosgurita">
+                        <img src="img/kaosgurita.jpeg" alt="Kaos Gurita" class="client-logo">
+                    </button>
                     <!-- <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='80' viewBox='0 0 160 80'%3E%3Crect width='160' height='80' fill='%23e2e8f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2364748b'%3ELogo 3%3C/text%3E%3C/svg%3E" alt="Logo 3" class="client-logo">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='80' viewBox='0 0 160 80'%3E%3Crect width='160' height='80' fill='%23e2e8f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2364748b'%3ELogo 4%3C/text%3E%3C/svg%3E" alt="Logo 4" class="client-logo">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='80' viewBox='0 0 160 80'%3E%3Crect width='160' height='80' fill='%23e2e8f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2364748b'%3ELogo 5%3C/text%3E%3C/svg%3E" alt="Logo 5" class="client-logo">
@@ -327,6 +331,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Client Detail Modal -->
+    <div id="clientModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="clientModalTitle">
+        <div class="modal-card client-modal-card">
+            <button class="modal-close" id="clientModalClose" aria-label="Tutup">&times;</button>
+            <div class="client-modal-logo-wrap">
+                <img id="clientModalLogo" src="" alt="" class="client-modal-logo">
+            </div>
+            <h3 id="clientModalTitle" class="modal-title"></h3>
+            <p id="clientModalDesc" class="modal-desc"></p>
+        </div>
+    </div>
 
     <!-- Package Detail Modal -->
     <div id="packageModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">

@@ -58,6 +58,56 @@ const packageDetails = {
   }
 };
 
+// ── Client Logo Modal ──
+const clientDetails = {
+  'bigstamp': {
+    name: 'Bigstamp',
+    logo: 'img/bigstamp.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  },
+  'kaosgurita': {
+    name: 'Kaos Gurita',
+    logo: 'img/kaosgurita.jpeg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const clientOverlay = document.getElementById('clientModal');
+  const clientClose = document.getElementById('clientModalClose');
+  const clientLogo = document.getElementById('clientModalLogo');
+  const clientTitle = document.getElementById('clientModalTitle');
+  const clientDesc = document.getElementById('clientModalDesc');
+
+  function openClientModal(key) {
+    const client = clientDetails[key];
+    if (!client) return;
+    clientLogo.src = client.logo;
+    clientLogo.alt = client.name;
+    clientTitle.textContent = client.name;
+    clientDesc.textContent = client.description;
+    clientOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeClientModal() {
+    clientOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.client-logo-btn').forEach(btn => {
+    btn.addEventListener('click', () => openClientModal(btn.dataset.client));
+  });
+
+  clientClose.addEventListener('click', closeClientModal);
+  clientOverlay.addEventListener('click', (e) => {
+    if (e.target === clientOverlay) closeClientModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeClientModal();
+  });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.getElementById('packageModal');
   const closeBtn = document.getElementById('modalClose');
