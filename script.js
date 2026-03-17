@@ -37,13 +37,13 @@ const packageDetails = {
         title: 'Paket C',
         description: 'Solusi konten yang komprehensif dan praktis untuk memulai membangun brand Anda di media sosial dengan strategi yang terukur dan hasil yang nyata. Paket ini mencakup manajemen penuh berbagai platform media sosial, produksi konten berkualitas tinggi, serta iklan berbayar yang dirancang untuk meningkatkan visibilitas dan engagement brand Anda. Dengan dukungan tim profesional kami yang berpengalaman, setiap kampanye dioptimalkan berdasarkan data dan insights terkini untuk memastikan pertumbuhan bisnis yang berkelanjutan dan ROI yang maksimal.',
         features: [
-            'Manajemen 3+ Platform Media Sosial',
-            '24 Konten Feed per Bulan',
-            'Produksi Video & Reels Premium',
-            'Iklan Berbayar (Meta/Google Ads)',
-            'Riset Mendalam & Strategi Konten',
-            'Konsultasi & Review Mingguan',
-            'Laporan Komprehensif Bulanan'
+            '6 Desain feeds',
+            '6 Story content',
+            '4 Video reels',
+            'Konsep konten',
+            'Caption dan copywriting',
+            'GRATIS pembuatan logo baru',
+            'Report berkala'
         ],
         waMessage: 'Permisi, saya ingin mengetahui lebih lanjut tentang Paket C'
     },
