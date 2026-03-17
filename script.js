@@ -3,7 +3,7 @@ const packageDetails = {
     'paket-a': {
         icon: 'fa-rocket',
         title: 'Paket A',
-        description: 'Dapatkan performa maksimal untuk mengembangkan dan memperkuat brand Anda di dunia digital dengan strategi media sosial yang terukur dan konsisten. Paket ini dirancang khusus untuk bisnis yang baru memulai perjalanan digital mereka dan ingin membangun kehadiran online yang solid melalui konten berkualitas tinggi dan engagement yang autentik.',
+        description: 'Dapatkan performa maksimal untuk mengembangkan dan memperkuat brand Anda di dunia digital. Paket terlengkap ini menawarkan produksi konten intensif meliputi puluhan desain feeds, story, dan video reels. Didukung dengan manajemen profil, copywriting profesional, serta 2x setup ads untuk jangkauan audiens yang maksimal.',
         features: [
             '10 Desain feeds',
             '10 Story content',
@@ -19,7 +19,7 @@ const packageDetails = {
     'paket-b': {
         icon: 'fa-chart-bar',
         title: 'Paket B',
-        description: 'Dapatkan strategi konten yang efektif dan terukur untuk mengembangkan brand Anda secara konsisten di berbagai platform media sosial. Kami akan membantu Anda merancang konten yang relevan dengan target audiens, meningkatkan engagement, dan membangun komunitas yang loyal di sekitar brand Anda. Dengan pendekatan data-driven dan analisis mendalam, paket ini memastikan setiap konten yang dipublikasikan memberikan hasil maksimal untuk pertumbuhan bisnis Anda.',
+        description: 'Dapatkan strategi konten yang efektif untuk mengembangkan brand kamu di media sosial. Solusi ideal dengan frekuensi konten yang konsisten di berbagai format (feeds, story, reels). Dilengkapi dengan konsep kreatif, manajemen profil, serta 1x setup ads untuk memperluas jangkauan brand secara terukur.',
         features: [
             '8 Desain feeds',
             '8 Story content',
@@ -35,7 +35,7 @@ const packageDetails = {
     'paket-c': {
         icon: 'fa-bullhorn',
         title: 'Paket C',
-        description: 'Solusi konten yang komprehensif dan praktis untuk memulai membangun brand Anda di media sosial dengan strategi yang terukur dan hasil yang nyata. Paket ini mencakup manajemen penuh berbagai platform media sosial, produksi konten berkualitas tinggi, serta iklan berbayar yang dirancang untuk meningkatkan visibilitas dan engagement brand Anda. Dengan dukungan tim profesional kami yang berpengalaman, setiap kampanye dioptimalkan berdasarkan data dan insights terkini untuk memastikan pertumbuhan bisnis yang berkelanjutan dan ROI yang maksimal.',
+        description: 'Solusi konten praktis untuk mulai membangun brand kamu di media sosial. Nikmati paket esensial dengan pembuatan konten berkualitas (feeds, story, reels) lengkap dengan konsep dan copywriting. Spesial di paket ini, Anda juga mendapatkan ekstra GRATIS pembuatan logo baru untuk memperkuat identitas bisnis Anda.',
         features: [
             '6 Desain feeds',
             '6 Story content',
