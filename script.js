@@ -19,21 +19,23 @@ const packageDetails = {
     'paket-b': {
         icon: 'fa-chart-bar',
         title: 'Paket B',
-        description: 'Solusi menengah untuk bisnis yang ingin memperluas jangkauan digital dengan strategi konten yang lebih beragam dan frekuensi posting yang lebih tinggi.',
+        description: 'Dapatkan strategi konten yang efektif dan terukur untuk mengembangkan brand Anda secara konsisten di berbagai platform media sosial. Kami akan membantu Anda merancang konten yang relevan dengan target audiens, meningkatkan engagement, dan membangun komunitas yang loyal di sekitar brand Anda. Dengan pendekatan data-driven dan analisis mendalam, paket ini memastikan setiap konten yang dipublikasikan memberikan hasil maksimal untuk pertumbuhan bisnis Anda.',
         features: [
-            'Manajemen 2 Platform Media Sosial',
-            '16 Konten Feed per Bulan',
-            'Konten Video Reels / TikTok',
-            'Riset Tren & Kompetitor',
-            'Konsultasi Strategi Bulanan',
-            'Laporan & Analisis Performa'
+            '8 Desain feeds',
+            '8 Story content',
+            '7 Video reels',
+            'Konsep konten',
+            'Caption dan copywriting',
+            'Management bio profile',
+            '1x Ads setup',
+            'Report berkala'
         ],
         waMessage: 'Permisi, saya ingin mengetahui lebih lanjut tentang Paket B'
     },
     'paket-c': {
         icon: 'fa-bullhorn',
         title: 'Paket C',
-        description: 'Paket lengkap untuk bisnis yang serius tumbuh secara digital. Termasuk iklan berbayar dan pengelolaan multi-platform secara penuh oleh tim Koneva.',
+        description: 'Solusi konten yang komprehensif dan praktis untuk memulai membangun brand Anda di media sosial dengan strategi yang terukur dan hasil yang nyata. Paket ini mencakup manajemen penuh berbagai platform media sosial, produksi konten berkualitas tinggi, serta iklan berbayar yang dirancang untuk meningkatkan visibilitas dan engagement brand Anda. Dengan dukungan tim profesional kami yang berpengalaman, setiap kampanye dioptimalkan berdasarkan data dan insights terkini untuk memastikan pertumbuhan bisnis yang berkelanjutan dan ROI yang maksimal.',
         features: [
             'Manajemen 3+ Platform Media Sosial',
             '24 Konten Feed per Bulan',
