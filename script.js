@@ -1,61 +1,64 @@
 // ── Package Detail Modal ──
 const packageDetails = {
-  'paket-a': {
-    icon: 'fa-rocket',
-    title: 'Paket A',
-    description: 'Paket perdana yang dirancang khusus untuk UMKM yang baru memulai perjalanan digital. Kami bantu bangun fondasi konten yang kuat dan konsisten di media sosial Anda.',
-    features: [
-      'Manajemen 1 Platform Media Sosial',
-      '8 Konten Feed per Bulan',
-      'Desain Grafis Profesional',
-      'Caption & Hashtag Strategis',
-      'Laporan Performa Bulanan'
-    ],
-    waMessage: 'Permisi, saya ingin mengetahui lebih lanjut tentang Paket A'
-  },
-  'paket-b': {
-    icon: 'fa-chart-bar',
-    title: 'Paket B',
-    description: 'Solusi menengah untuk bisnis yang ingin memperluas jangkauan digital dengan strategi konten yang lebih beragam dan frekuensi posting yang lebih tinggi.',
-    features: [
-      'Manajemen 2 Platform Media Sosial',
-      '16 Konten Feed per Bulan',
-      'Konten Video Reels / TikTok',
-      'Riset Tren & Kompetitor',
-      'Konsultasi Strategi Bulanan',
-      'Laporan & Analisis Performa'
-    ],
-    waMessage: 'Permisi, saya ingin mengetahui lebih lanjut tentang Paket B'
-  },
-  'paket-c': {
-    icon: 'fa-bullhorn',
-    title: 'Paket C',
-    description: 'Paket lengkap untuk bisnis yang serius tumbuh secara digital. Termasuk iklan berbayar dan pengelolaan multi-platform secara penuh oleh tim Koneva.',
-    features: [
-      'Manajemen 3+ Platform Media Sosial',
-      '24 Konten Feed per Bulan',
-      'Produksi Video & Reels Premium',
-      'Iklan Berbayar (Meta/Google Ads)',
-      'Riset Mendalam & Strategi Konten',
-      'Konsultasi & Review Mingguan',
-      'Laporan Komprehensif Bulanan'
-    ],
-    waMessage: 'Permisi, saya ingin mengetahui lebih lanjut tentang Paket C'
-  },
-  'video-company-profile': {
-    icon: 'fa-video',
-    title: 'Video Company Profile',
-    description: 'Tampilkan wajah terbaik bisnis Anda melalui video profil perusahaan yang sinematik dan profesional. Diproduksi oleh tim kreatif kami dari awal hingga akhir.',
-    features: [
-      'Professional Shooting On-Location',
-      'High Quality Editing & Color Grading',
-      'Script & Storyboard Planning',
-      'Licensed Background Music',
-      'Durasi Video 3–5 Menit',
-      'Revisi hingga 2x'
-    ],
-    waMessage: 'Permisi, saya ingin mengetahui lebih lanjut tentang Video Company Profile'
-  }
+    'paket-a': {
+        icon: 'fa-rocket',
+        title: 'Paket A',
+        description: 'Dapatkan performa maksimal untuk mengembangkan dan memperkuat brand Anda di dunia digital dengan strategi media sosial yang terukur dan konsisten. Paket ini dirancang khusus untuk bisnis yang baru memulai perjalanan digital mereka dan ingin membangun kehadiran online yang solid melalui konten berkualitas tinggi dan engagement yang autentik.',
+        features: [
+            '10 Desain feeds',
+            '10 Story content',
+            '10 Video reels',
+            'Konsep konten',
+            'Caption dan copywriting',
+            'Management bio profile',
+            '2x Ads setup',
+            'Report berkala'
+        ],
+        waMessage: 'Permisi, saya ingin mengetahui lebih lanjut tentang Paket A'
+    },
+    'paket-b': {
+        icon: 'fa-chart-bar',
+        title: 'Paket B',
+        description: 'Solusi menengah untuk bisnis yang ingin memperluas jangkauan digital dengan strategi konten yang lebih beragam dan frekuensi posting yang lebih tinggi.',
+        features: [
+            'Manajemen 2 Platform Media Sosial',
+            '16 Konten Feed per Bulan',
+            'Konten Video Reels / TikTok',
+            'Riset Tren & Kompetitor',
+            'Konsultasi Strategi Bulanan',
+            'Laporan & Analisis Performa'
+        ],
+        waMessage: 'Permisi, saya ingin mengetahui lebih lanjut tentang Paket B'
+    },
+    'paket-c': {
+        icon: 'fa-bullhorn',
+        title: 'Paket C',
+        description: 'Paket lengkap untuk bisnis yang serius tumbuh secara digital. Termasuk iklan berbayar dan pengelolaan multi-platform secara penuh oleh tim Koneva.',
+        features: [
+            'Manajemen 3+ Platform Media Sosial',
+            '24 Konten Feed per Bulan',
+            'Produksi Video & Reels Premium',
+            'Iklan Berbayar (Meta/Google Ads)',
+            'Riset Mendalam & Strategi Konten',
+            'Konsultasi & Review Mingguan',
+            'Laporan Komprehensif Bulanan'
+        ],
+        waMessage: 'Permisi, saya ingin mengetahui lebih lanjut tentang Paket C'
+    },
+    'video-company-profile': {
+        icon: 'fa-video',
+        title: 'Video Company Profile',
+        description: 'Tampilkan wajah terbaik bisnis Anda melalui video profil perusahaan yang sinematik dan profesional. Diproduksi oleh tim kreatif kami dari awal hingga akhir.',
+        features: [
+            'Professional Shooting On-Location',
+            'High Quality Editing & Color Grading',
+            'Script & Storyboard Planning',
+            'Licensed Background Music',
+            'Durasi Video 3–5 Menit',
+            'Revisi hingga 2x'
+        ],
+        waMessage: 'Permisi, saya ingin mengetahui lebih lanjut tentang Video Company Profile'
+    }
 };
 
 // ── Client Logo Modal ──
