@@ -78,6 +78,7 @@ const clientDetails = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  // ── Client Logo Modal Setup ──
   const clientOverlay = document.getElementById('clientModal');
   const clientClose = document.getElementById('clientModalClose');
   const clientLogo = document.getElementById('clientModalLogo');
@@ -111,11 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeClientModal();
   });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-  const overlay = document.getElementById('packageModal');
-  const closeBtn = document.getElementById('modalClose');
+  // ── Package Detail Modal Setup ──
+  const packageOverlay = document.getElementById('packageModal');
+  const packageCloseBtn = document.getElementById('modalClose');
   const modalIcon = document.getElementById('modalIcon');
   const modalTitle = document.getElementById('modalTitle');
   const modalDesc = document.getElementById('modalDesc');
@@ -142,12 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const waUrl = 'https://wa.me/6285166194191?text=' + encodeURIComponent(pkg.waMessage);
     modalCheckout.href = waUrl;
 
-    overlay.classList.add('active');
+    packageOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
   function closeModal() {
-    overlay.classList.remove('active');
+    packageOverlay.classList.remove('active');
     document.body.style.overflow = '';
   }
 
@@ -157,11 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Close on X button
-  closeBtn.addEventListener('click', closeModal);
+  packageCloseBtn.addEventListener('click', closeModal);
 
   // Close on overlay click (outside card)
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) closeModal();
+  packageOverlay.addEventListener('click', (e) => {
+    if (e.target === packageOverlay) closeModal();
   });
 
   // Close on Escape key
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Mobile Navigation Toggle
+// ── Mobile Navigation Toggle ──
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-menu a');
@@ -366,9 +366,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Animate service cards (disabled per request - animations handled in CSS now)
-// removed automatic JS animation for service cards to keep layout static
-
 // Animate portfolio items (only if present)
 const portfolioItems = document.querySelectorAll('.portfolio-item');
 if (portfolioItems.length > 0) {
@@ -388,9 +385,6 @@ featureItems.forEach((item, index) => {
     item.style.transition = `all 0.6s ease ${index * 0.1}s`;
     observer.observe(item);
 });
-
-// Contact Form Handling
-// Contact Form handling moved to WhatsApp integration below
 
 // Add parallax effect to hero section
 window.addEventListener('scroll', () => {
@@ -464,8 +458,6 @@ valueCards.forEach((card, index) => {
     card.style.transition = `all 0.6s ease ${index * 0.1}s`;
     observer.observe(card);
 });
-
-// Remove service button code since buttons are removed
 
 // CTA buttons
 const ctaButtons = document.querySelectorAll('.cta-btn');
@@ -641,7 +633,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleServiceBtns = document.querySelectorAll('.toggle-service-btn');
 
     toggleServiceBtns.forEach(btn => {
-        // Remove old listeners to be safe (though cloning is better, consistent logic is enough)
         btn.onclick = (e) => {
             e.preventDefault();
             toggleService(btn);
@@ -649,11 +640,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // WhatsApp Form Submission
+    const contactForm = document.getElementById("contactForm");
 
-        const contactForm = document.getElementById("contactForm");
-
-        if (!contactForm) return;
-
+    if (contactForm) {
         contactForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
@@ -665,14 +654,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const company = (formData.get("company") || "").trim();
             const message = (formData.get("message") || "").trim();
 
-            // Construct WhatsApp message
-            const waText =
-            `Halo Koneva, saya ingin berkonsultasi.
-
-            *Nama:* ${name}
-            *No. HP:* ${phone}
-            *Perusahaan:* ${company}
-            *Pesan:* ${message}`;
+            // Construct WhatsApp message (dedented to avoid extra leading whitespace)
+            const waText = `Halo Koneva, saya ingin berkonsultasi.\n\n*Nama:* ${name}\n*No. HP:* ${phone}\n*Perusahaan:* ${company}\n*Pesan:* ${message}`;
 
             // Encode message
             const encodedText = encodeURIComponent(waText);
@@ -689,34 +672,36 @@ document.addEventListener('DOMContentLoaded', () => {
             // Reset form
             contactForm.reset();
         });
+    }
 
-});
-
-// FAQ Accordion
-document.addEventListener('DOMContentLoaded', () => {
+    // FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
 
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         const answer = item.querySelector('.faq-answer');
 
-        question.addEventListener('click', () => {
-            const isOpen = item.classList.contains('open');
+        if (question && answer) {
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
 
-            // Close all open items
-            faqItems.forEach(i => {
-                i.classList.remove('open');
-                i.querySelector('.faq-answer').classList.remove('open');
-                i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                // Close all open items
+                faqItems.forEach(i => {
+                    i.classList.remove('open');
+                    const iAnswer = i.querySelector('.faq-answer');
+                    const iQuestion = i.querySelector('.faq-question');
+                    if (iAnswer) iAnswer.classList.remove('open');
+                    if (iQuestion) iQuestion.setAttribute('aria-expanded', 'false');
+                });
+
+                // If it was closed, open it
+                if (!isOpen) {
+                    item.classList.add('open');
+                    answer.classList.add('open');
+                    question.setAttribute('aria-expanded', 'true');
+                }
             });
-
-            // If it was closed, open it
-            if (!isOpen) {
-                item.classList.add('open');
-                answer.classList.add('open');
-                question.setAttribute('aria-expanded', 'true');
-            }
-        });
+        }
     });
 });
 
